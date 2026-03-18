@@ -23,14 +23,3 @@ export const responsiveStyle = (styles: {
     ${styles.desktop}
   }
 `;
-
-export const responsiveCss = (styles: {
-  mobile: ReturnType<typeof css>;
-  desktop: ReturnType<typeof css>;
-}) => css`
-  ${styles.mobile}
-
-  @media (min-width: ${BREAKPOINTS.desktop}px) {
-    ${styles.desktop}
-  }
-`;
