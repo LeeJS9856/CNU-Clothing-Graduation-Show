@@ -22,12 +22,11 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     padding: 0;
-    // 모바일 마진 수정은 여기서
-    margin: 0 16px;
-    
-    @media (min-width: ${BREAKPOINTS.desktop}px) {
-      // 데스크톱 마진 수정은 여기서
-      margin: 0 40px;
+    // 데스크톱 마진 수정은 여기서
+    margin: 0 40px;
+    @media (max-width: ${BREAKPOINTS.mobile}px) {
+      // 모바일 마진 수정은 여기서
+      margin: 0 16px;
     }
   }
 `
