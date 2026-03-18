@@ -1,6 +1,6 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
-import { responsiveCss } from '@/styles/responsive';
+import {responsiveStyle } from '@/styles/responsive';
 import { useResponsive } from '@/hooks/useResponsive';
 
 const Main = (): React.JSX.Element => {
@@ -26,7 +26,7 @@ const SafeProvider = styled.div`
 `;
 
 const Content = styled.div`
-  ${responsiveCss({
+  ${responsiveStyle({
     mobile: css`
       padding: 20px;
     `,
