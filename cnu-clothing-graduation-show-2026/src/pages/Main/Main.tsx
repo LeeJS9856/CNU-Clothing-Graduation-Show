@@ -1,6 +1,5 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
-import {responsiveStyle } from '@/styles/responsive';
 import { useResponsive } from '@/hooks/useResponsive';
 
 const Main = (): React.JSX.Element => {
@@ -8,11 +7,9 @@ const Main = (): React.JSX.Element => {
 
   return (
     <SafeProvider>
-      <Content>
         <Title>
           {device === 'mobile' ? '📱 모바일' : '🖥️ 데스크톱'}
         </Title>
-      </Content>
     </SafeProvider>
   );
 };
@@ -23,17 +20,6 @@ const SafeProvider = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-`;
-
-const Content = styled.div`
-  ${responsiveStyle({
-    mobile: css`
-      padding: 20px;
-    `,
-    desktop: css`
-      padding: 40px;
-    `,
-  })}
 `;
 
 const Title = styled.h1`
