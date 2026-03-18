@@ -1,6 +1,6 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
-import { responsive, responsiveCss } from '@/styles/responsive';
+import { responsiveCss } from '@/styles/responsive';
 import { useResponsive } from '@/hooks/useResponsive';
 
 const Main = (): React.JSX.Element => {
