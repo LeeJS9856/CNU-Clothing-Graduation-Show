@@ -1,10 +1,18 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+import { responsive, responsiveCss } from '@/styles/responsive';
+import { useResponsive } from '@/hooks/useResponsive';
 
-const Home = (): React.JSX.Element => {
+const Main = (): React.JSX.Element => {
+  const device = useResponsive();
+
   return (
     <SafeProvider>
-        helloworld
+      <Content>
+        <Title>
+          {device === 'mobile' ? '📱 모바일' : '🖥️ 데스크톱'}
+        </Title>
+      </Content>
     </SafeProvider>
   );
 };
@@ -15,7 +23,22 @@ const SafeProvider = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f0f0f0; 
 `;
 
-export default Home;
+const Content = styled.div`
+  ${responsiveCss({
+    mobile: css`
+      padding: 20px;
+    `,
+    desktop: css`
+      padding: 40px;
+    `,
+  })}
+`;
+
+const Title = styled.h1`
+  font-size: 24px ;
+  font-weight: bold;
+`;
+
+export default Main;
