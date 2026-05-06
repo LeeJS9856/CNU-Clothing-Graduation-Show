@@ -8,7 +8,7 @@ export const responsive = <T extends string | number>(
 ) => css`
   ${property}: ${values.mobile};
 
-  @media (min-width: ${BREAKPOINTS.desktop}px) {
+  @media (min-width: ${BREAKPOINTS.mobile}px) {
     ${property}: ${values.desktop};
   }
 `;
@@ -19,7 +19,7 @@ export const responsiveStyle = (styles: {
 }) => css`
   ${styles.mobile}
 
-  @media (min-width: ${BREAKPOINTS.desktop}px) {
+  @media (min-width: ${BREAKPOINTS.mobile}px) {
     ${styles.desktop}
   }
 `;

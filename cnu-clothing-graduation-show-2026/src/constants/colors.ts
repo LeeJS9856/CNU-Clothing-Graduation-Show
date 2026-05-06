@@ -1,13 +1,13 @@
 export const COLORS = {
   white: '#ffffff',
   black: '#000000',
-  primary: '#3364A0',
+  primary: '#962c2c',
   background: {
     main: '#ffffff',
     grey: '#f0f0f0',
   },
   brand: {
-    primary: '#3364A0',
+    primary: '#962c2c',
     secondary: '#163162',
   },
   text: {

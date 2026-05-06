@@ -5,7 +5,7 @@ import { responsiveStyle } from '@/styles/responsive';
 import Navigation from '@/components/layout/Navigation'
 import { COLORS } from '@/constants/colors'
 
-const Main = (): React.JSX.Element => {
+const AboutPage = (): React.JSX.Element => {
   const device = useResponsive();
   const isMounted = React.useMemo(() => typeof window !== 'undefined', []);
 
@@ -72,4 +72,4 @@ const Title = styled.h1`
   color: #ccc;
 `;
 
-export default Main;
+export default AboutPage;
