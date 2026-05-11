@@ -1,26 +1,24 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
-import { useResponsive } from '@/hooks/useResponsive';
 import { responsiveStyle } from '@/styles/responsive';
-import Navigation from '@/components/layout/Navigation'
-import { COLORS } from '@/constants/colors'
+import Navigation from '@/components/layout/Navigation';
+import Footer from '@/components/layout/Footer';
+import { COLORS } from '@/constants/colors';
+import MainPoster from '@/assets/images/main_poster.png';
 
 const Main = (): React.JSX.Element => {
-  const device = useResponsive();
-  const isMounted = React.useMemo(() => typeof window !== 'undefined', []);
-
   return (
     <SafeProvider>
       <Header>
-        <BrandText href={`/`}>결: 시작과 동시에 축적될 방향</BrandText>
+        <BrandText href="/">결: 시작과 동시에 축적될 방향</BrandText>
         <Navigation />
       </Header>
 
       <Content>
-        <Title>
-          {isMounted && (device === 'mobile' ? '📱 모바일' : '🖥️ 데스크톱')}
-        </Title>
+        <PosterImage src={MainPoster} alt="Main Poster" />
       </Content>
+
+      <Footer />
     </SafeProvider>
   );
 };
@@ -28,48 +26,48 @@ const Main = (): React.JSX.Element => {
 const SafeProvider = styled.div`
   width: 100%;
   max-width: 1280px;
+  margin: 0 auto;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 
   ${responsiveStyle({
-    mobile: css` padding: 0 16px; `,
-    desktop: css` padding: 0 40px; `,
+    mobile: css`padding: 0 16px;`,
+    desktop: css`padding: 0 40px;`,
   })}
 `;
 
 const Header = styled.header`
   width: 100%;
   ${responsiveStyle({
-    mobile: css` padding-top: 32px; `,
-    desktop: css` padding-top: 60px; `,    
-
+    mobile: css`padding-top: 32px; padding-bottom: 24px;`,
+    desktop: css`padding-top: 60px; padding-bottom: 40px;`,
   })}
 `;
 
 const BrandText = styled.a`
   display: block;
-  text-align: left; 
+  text-align: left;
   font-weight: 700;
   color: ${COLORS.brand.primary};
   ${responsiveStyle({
     mobile: css`font-size: 30px;`,
     desktop: css`font-size: 45px;`,
   })}
-  text-decoration:none;
+  text-decoration: none;
 `;
 
 const Content = styled.div`
-  flex: 1;
+  width: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  margin-bottom: 60px; /* Footer와의 간격 */
 `;
 
-const Title = styled.h1`
-  font-size: 24px;
-  font-weight: bold;
-  color: #ccc;
+const PosterImage = styled.img`
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* 가로폭에 맞춰 꽉 채움 */
+  display: block;
 `;
 
 export default Main;
