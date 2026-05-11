@@ -1,6 +1,5 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
-import { useResponsive } from '@/hooks/useResponsive';
 import { responsiveStyle } from '@/styles/responsive';
 import Navigation from '@/components/layout/Navigation';
 import Footer from '@/components/layout/Footer';
@@ -8,9 +7,6 @@ import { COLORS } from '@/constants/colors';
 import MainPoster from '@/assets/images/main_poster.png';
 
 const Main = (): React.JSX.Element => {
-  const device = useResponsive();
-  const isMounted = React.useMemo(() => typeof window !== 'undefined', []);
-
   return (
     <SafeProvider>
       <Header>
