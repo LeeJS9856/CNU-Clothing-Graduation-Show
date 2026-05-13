@@ -13,5 +13,6 @@ export const COLORS = {
   text: {
     main: '#333333',
     grey: '#383838',
+    secondary: '#666666',
   },
 } as const;
