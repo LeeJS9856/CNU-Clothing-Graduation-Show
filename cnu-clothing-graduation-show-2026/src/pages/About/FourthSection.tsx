@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 import Footer from '@/components/layout/Footer';
 import { COLORS } from '@/constants/colors';

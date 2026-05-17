@@ -28,10 +28,10 @@ const Footer = () => {
           <SectionGroup>
             <SectionTitle>Links</SectionTitle>
             <InfoList>
-              <InfoLink href="https://fashion.jnu.ac.kr/" target="_blank">
+              <InfoLink href="https://clothing.jnu.ac.kr/clothing/index.do" target="_blank">
                 전남대학교 의류학과
               </InfoLink>
-              <InfoLink href="https://www.instagram.com/" target="_blank">
+              <InfoLink href="https://www.instagram.com/cnu_c.a.t?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
                 Instagram
               </InfoLink>
             </InfoList>
