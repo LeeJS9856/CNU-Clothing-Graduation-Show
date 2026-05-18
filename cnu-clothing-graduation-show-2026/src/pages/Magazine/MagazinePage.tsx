@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import styled, { keyframes, css } from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import Layout from '@/components/layout/Layout';
 
 // 샘플 이미지들 (실제 매거진 이미지 경로로 교체하세요)
