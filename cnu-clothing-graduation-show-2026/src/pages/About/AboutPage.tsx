@@ -1,75 +1,45 @@
-import React from 'react';
 import styled, { css } from 'styled-components';
-import { useResponsive } from '@/hooks/useResponsive';
 import { responsiveStyle } from '@/styles/responsive';
-import Navigation from '@/components/layout/Navigation'
-import { COLORS } from '@/constants/colors'
-
-const AboutPage = (): React.JSX.Element => {
-  const device = useResponsive();
-  const isMounted = React.useMemo(() => typeof window !== 'undefined', []);
-
+import FirstSection from './FirstSection';
+import SecondSection from './SecondSection';
+import ThirdSection from './ThirdSection';
+import FourthSection from './FourthSection';
+const AboutPage = () => {
   return (
     <SafeProvider>
-      <Header>
-        <BrandText href={`/`}>결: 시작과 동시에 축적될 방향</BrandText>
-        <Navigation />
-      </Header>
+      <ScrollContainer>
+        {/* ── 첫 번째 섹션 (분리됨) ── */}
+        <FirstSection />
 
-      <Content>
-        <Title>
-          {isMounted && (device === 'mobile' ? '📱 모바일' : '🖥️ 데스크톱')}
-        </Title>
-      </Content>
+        <SecondSection />
+        <ThirdSection />
+        <FourthSection />
+      </ScrollContainer>
     </SafeProvider>
   );
 };
 
+/* ── 전체 레이아웃 스타일 ── */
+
 const SafeProvider = styled.div`
   width: 100%;
   max-width: 1280px;
+  margin: 0 auto;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-
   ${responsiveStyle({
-    mobile: css` padding: 0 16px; `,
-    desktop: css` padding: 0 40px; `,
+    mobile: css`padding: 0 16px;`,
+    desktop: css`padding: 0 40px;`,
   })}
 `;
 
-const Header = styled.header`
+const ScrollContainer = styled.div`
   width: 100%;
-  ${responsiveStyle({
-    mobile: css` padding-top: 32px; `,
-    desktop: css` padding-top: 60px; `,    
-
-  })}
-`;
-
-const BrandText = styled.a`
-  display: block;
-  text-align: left; 
-  font-weight: 700;
-  color: ${COLORS.brand.primary};
-  ${responsiveStyle({
-    mobile: css`font-size: 30px;`,
-    desktop: css`font-size: 45px;`,
-  })}
-  text-decoration:none;
-`;
-
-const Content = styled.div`
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
-
-const Title = styled.h1`
-  font-size: 24px;
-  font-weight: bold;
-  color: #ccc;
+  height: 100vh;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+  &::-webkit-scrollbar { display: none; }
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 `;
 
 export default AboutPage;

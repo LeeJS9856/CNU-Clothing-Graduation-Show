@@ -10,8 +10,12 @@ export const COLORS = {
     primary: '#962c2c',
     secondary: '#163162',
   },
+  gray: {
+    light: '#efefef',
+  },
   text: {
     main: '#333333',
     grey: '#383838',
+    secondary: '#666666',
   },
 } as const;

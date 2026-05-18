@@ -29,5 +29,9 @@ const GlobalStyle = createGlobalStyle`
       margin: 0 16px;
     }
   }
+
+  html{
+    scrollbar-gutter: stable; 
+  }
 `
 export default GlobalStyle;
