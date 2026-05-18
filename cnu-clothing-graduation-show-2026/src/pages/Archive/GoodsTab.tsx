@@ -60,6 +60,7 @@ const GoodsList = styled.div`
   display: flex;
   flex-direction: column;
   gap: 100px; 
+  margin-bottom: 100px;
 `;
 
 const GoodsItem = styled.div<{ $isReverse: boolean }>`
