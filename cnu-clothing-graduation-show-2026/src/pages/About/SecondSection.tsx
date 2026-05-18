@@ -1,10 +1,7 @@
 import { COLORS } from '@/constants/colors';
 import { useEffect, useRef, useState } from 'react';
-import styled, { css, keyframes } from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
-/* --------------------------------------------------------------
-   이미지에서 확인한 텍스트 내용 (복사‑붙여넣기용)
-   -------------------------------------------------------------- */
 const KR = {
   title: '2026 전남대학교 의류학과 졸업전시회',
   subtitle: '<결 : 시작과 동시에 축적될 방향>',

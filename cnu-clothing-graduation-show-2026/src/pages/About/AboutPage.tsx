@@ -42,27 +42,4 @@ const ScrollContainer = styled.div`
   scrollbar-width: none;
 `;
 
-const Section = styled.section<{ $bgColor?: string }>`
-  width: 100%;
-  height: 100vh;
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
-  background-color: ${props => props.$bgColor || 'transparent'};
-  display: flex;
-  flex-direction: column;
-`;
-
-const SectionMain = styled.main`
-  flex: 1;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-`;
-
-const CenterLabel = styled.span` font-size: 1.2rem; font-weight: 700; margin-bottom: 1rem; `;
-const BigTitle = styled.h2` font-size: clamp(3rem, 8vw, 5rem); font-weight: 900; margin-bottom: 20px; `;
-const Desc = styled.p` font-size: 1.2rem; opacity: 0.7; `;
-
 export default AboutPage;

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import styled, { css, keyframes } from 'styled-components';
 import { responsiveStyle } from '@/styles/responsive';
 import Navigation from '@/components/layout/Navigation';

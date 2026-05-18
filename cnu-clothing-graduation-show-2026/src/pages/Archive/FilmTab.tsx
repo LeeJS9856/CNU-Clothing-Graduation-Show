@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import { useRef } from 'react';
 import styled from 'styled-components';
 import { COLORS } from '@/constants/colors';
 import video from '@/assets/videos/sample.mp4';
