@@ -81,7 +81,6 @@ const Wrapper = styled.div<{ $visible: boolean }>`
   width: 100%;
   max-width: 1280px;
   height: 100%;
-  padding: 80px 60px;
   display: grid;
   opacity: ${p => (p.$visible ? 1 : 0)};
   transition: opacity 0.8s ease;

@@ -10,7 +10,6 @@ const AboutPage = () => {
       <ScrollContainer>
         {/* ── 첫 번째 섹션 (분리됨) ── */}
         <FirstSection />
-
         <SecondSection />
         <ThirdSection />
         <FourthSection />

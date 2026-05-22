@@ -54,7 +54,7 @@ const BrandText = styled.a`
   font-weight: 700;
   color: ${COLORS.brand.primary};
   ${responsiveStyle({
-    mobile: css`font-size: 30px;`,
+    mobile: css`font-size: 20px;`,
     desktop: css`font-size: 45px;`,
   })}
   text-decoration: none;
