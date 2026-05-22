@@ -1,6 +1,7 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import Footer from '@/components/layout/Footer';
 import { COLORS } from '@/constants/colors';
+import { responsiveStyle } from '@/styles/responsive';
 
 const FourthSection = () => {
   return (
@@ -122,7 +123,10 @@ const NameList = styled.div`
   gap: 12px;
   
   span {
-    font-size: 1.1rem;
+    ${responsiveStyle({
+      mobile: css`font-size: 1.0rem;`,
+      desktop: css`font-size: 1.1rem;`,
+    })}
     color: ${COLORS.text.secondary};
     font-weight: 400;
     line-height: 1;

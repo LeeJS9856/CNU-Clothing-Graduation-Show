@@ -15,17 +15,14 @@ const Section = styled.section<{ $bgColor?: string }>`
   width: 100%;
   height: 100vh;
   scroll-snap-align: start;
-  scroll-snap-stop: always;
-  background-color: ${(props) => props.$bgColor ?? '#ffffff'};
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 `;
 
 const ImageWrapper = styled.div`
   /* 정사각형 박스 – 가로·세로 400px (필요에 따라 조정) */
-  width: 400px;
-  height: 400px;
   display: flex;
   justify-content: center;
   align-items: center;

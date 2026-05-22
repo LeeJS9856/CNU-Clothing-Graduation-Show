@@ -1,6 +1,7 @@
 import { COLORS } from '@/constants/colors';
+import { responsiveStyle } from '@/styles/responsive';
 import { useEffect, useRef, useState } from 'react';
-import styled, { keyframes } from 'styled-components';
+import styled, { css, keyframes } from 'styled-components';
 
 const KR = {
   title: '2026 전남대학교 의류학과 졸업전시회',
@@ -111,20 +112,30 @@ const TextBlock = styled.div`
 `;
 
 const Title = styled.h2`
-  font-size: 20px;
+  ${responsiveStyle({
+      mobile: css`font-size: 15px;`,
+      desktop: css`font-size: 20px;`,
+    })}
   font-weight: 500;
   color: ${COLORS.brand.primary};
   margin: 0;
 `;
 
 const Subtitle = styled.h2`
-  font-size: 20px;
+  ${responsiveStyle({
+      mobile: css`font-size: 15px;`,
+      desktop: css`font-size: 20px;`,
+    })}
+  margin: 0;
   font-weight: 500;
   color: ${COLORS.brand.primary};
 `;
 
 const Detail = styled.p`
-  font-size: 15px;
+  ${responsiveStyle({
+      mobile: css`font-size: 14px;`,
+      desktop: css`font-size: 16px;`,
+    })}
   margin: 0;
 `;
 
