@@ -61,7 +61,6 @@ const TabContainer = styled.div`
   width: 100%;
   margin: 0 auto;
   box-sizing: border-box;
-  padding: 20px;
 `;
 
 const MainTitle = styled.h2`
@@ -71,6 +70,9 @@ const MainTitle = styled.h2`
   color: ${COLORS.primary};
   text-align: left;
   margin-bottom: 40px;
+  @media (max-width: 768px) {
+    font-size: 4vw;
+  }
 `;
 
 const GoodsList = styled.div`
@@ -87,10 +89,14 @@ const InfoContainer = styled.div`
 
 const GoodsName = styled.h3`
   font-size: 1.6rem;
-  font-weight: 700;
+  font-weight: 800;
   color: ${COLORS.black};
   margin: 0 0 16px 0;
   word-break: keep-all;
+  @media (max-width: 768px) {
+    font-size: 1.2rem;
+    text-align: center;
+  }
 `;
 
 const GoodsDescription = styled.p`
@@ -99,6 +105,10 @@ const GoodsDescription = styled.p`
   line-height: 1.6;
   margin: 0;
   word-break: keep-all;
+  @media (max-width: 768px) {
+    font-size: 1.0rem;
+    text-align: center;
+  }
 `;
 
 const GoodsImage = styled.img`
