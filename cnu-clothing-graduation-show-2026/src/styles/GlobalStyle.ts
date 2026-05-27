@@ -31,8 +31,9 @@ const GlobalStyle = createGlobalStyle`
     }
     
     html{
+    color-scheme: light;
     background-color: ${COLORS.white};
-    scrollbar-gutter: stable; 
+    scrollbar-gutter: stable;
   }
 `
 export default GlobalStyle;
