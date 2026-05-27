@@ -18,20 +18,20 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
     font-family: 'Pretendard', sans-serif;
-    background-color: ${COLORS.white};
-  }
-
-  body {
+    }
+    
+    body {
     padding: 0;
     // 데스크톱 마진 수정은 여기서
     margin: 0 40px;
     @media (max-width: ${BREAKPOINTS.mobile}px) {
-      // 모바일 마진 수정은 여기서
-      margin: 0 16px;
+    // 모바일 마진 수정은 여기서
+    margin: 0 16px;
     }
-  }
-
-  html{
+    }
+    
+    html{
+    background-color: ${COLORS.white};
     scrollbar-gutter: stable; 
   }
 `
