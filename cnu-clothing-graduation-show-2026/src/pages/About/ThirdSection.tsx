@@ -22,7 +22,8 @@ const Section = styled.section<{ $bgColor?: string }>`
 `;
 
 const ImageWrapper = styled.div`
-  /* 정사각형 박스 – 가로·세로 400px (필요에 따라 조정) */
+  width: 90%;
+  height: 90vh;
   display: flex;
   justify-content: center;
   align-items: center;
