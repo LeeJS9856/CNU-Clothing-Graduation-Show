@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import styled, { css } from 'styled-components';
 import { responsiveStyle } from '@/styles/responsive';
@@ -55,6 +55,24 @@ const WorkDetailPage = (): React.JSX.Element => {
 
   const handleBack = () => navigate(categoryListPath);
 
+  const thumbnailListRef = useRef<HTMLDivElement>(null);
+  const [showTopFade, setShowTopFade] = useState(false);
+  const [showBottomFade, setShowBottomFade] = useState(false);
+
+  const updateFades = useCallback(() => {
+    const el = thumbnailListRef.current;
+    if (!el) return;
+    const { scrollTop, scrollHeight, clientHeight } = el;
+    setShowTopFade(scrollTop > 1);
+    setShowBottomFade(scrollTop + clientHeight < scrollHeight - 1);
+  }, []);
+
+  useEffect(() => {
+    updateFades();
+    window.addEventListener('resize', updateFades);
+    return () => window.removeEventListener('resize', updateFades);
+  }, [updateFades, works]);
+
   return (
     <Layout>
       <Content>
@@ -97,7 +115,12 @@ const WorkDetailPage = (): React.JSX.Element => {
           <>
             <DetailLayout>
               <ImageColumn>
-                <ThumbnailList>
+                <ThumbnailList
+                  ref={thumbnailListRef}
+                  onScroll={updateFades}
+                  $showTopFade={showTopFade}
+                  $showBottomFade={showBottomFade}
+                >
                   {works.map((work) => (
                     <ThumbnailItem
                       key={work.id}
@@ -271,6 +294,7 @@ const ImageColumn = styled.div`
   display: flex;
   flex-direction: row;
   align-items: flex-start;
+  container-type: inline-size;
 
   ${responsiveStyle({
     mobile: css`
@@ -286,12 +310,32 @@ const ImageColumn = styled.div`
   })}
 `;
 
-const ThumbnailList = styled.div`
+const FADE_SIZE = '48px';
+
+const buildMask = (top: boolean, bottom: boolean): string => {
+  const start = top ? `transparent 0, black ${FADE_SIZE}` : 'black 0';
+  const end = bottom ? `black calc(100% - ${FADE_SIZE}), transparent 100%` : 'black 100%';
+  return `linear-gradient(to bottom, ${start}, ${end})`;
+};
+
+const ThumbnailList = styled.div<{ $showTopFade: boolean; $showBottomFade: boolean }>`
   display: flex;
   flex-direction: column;
   flex-shrink: 0;
   gap: var(--thumb-gap);
   width: calc((100% - var(--thumb-gap) * 3.828) / 6);
+  max-height: calc(((100cqw - var(--thumb-gap) * 3.828) / 6) * 1.414 * 5 + var(--thumb-gap) * 4);
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  mask-image: ${({ $showTopFade, $showBottomFade }) => buildMask($showTopFade, $showBottomFade)};
+  -webkit-mask-image: ${({ $showTopFade, $showBottomFade }) => buildMask($showTopFade, $showBottomFade)};
+  transition: mask-image 0.2s ease, -webkit-mask-image 0.2s ease;
 `;
 
 const ThumbnailItem = styled.div<{ $isActive: boolean }>`
