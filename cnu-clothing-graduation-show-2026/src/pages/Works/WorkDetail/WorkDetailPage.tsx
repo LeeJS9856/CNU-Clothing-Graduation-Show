@@ -78,7 +78,18 @@ const WorkDetailPage = (): React.JSX.Element => {
           </SubTabBar>
         )}
 
-        <BackButton onClick={handleBack}>{'<'}</BackButton>
+        <BackButton onClick={handleBack} aria-label="뒤로가기">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M16 4 L8 12 L16 20"
+              stroke="currentColor"
+              strokeWidth="2.5"
+              strokeLinecap="square"
+              strokeLinejoin="miter"
+              vectorEffect="non-scaling-stroke"
+            />
+          </svg>
+        </BackButton>
 
         {!currentWork ? (
           <NotFound>작품을 찾을 수 없습니다.</NotFound>
@@ -205,21 +216,30 @@ const BackButton = styled.button`
   border: none;
   cursor: pointer;
   color: ${COLORS.brand.primary};
-  font-weight: 700;
-  line-height: 1;
   padding: 0;
   align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 
   ${responsiveStyle({
     mobile: css`
-      font-size: 18px;
+      width: 24px;
+      height: 24px;
       margin-bottom: 24px;
     `,
     desktop: css`
-      font-size: 24px;
+      width: 32px;
+      height: 32px;
       margin-bottom: 40px;
     `,
   })}
+
+  svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
 `;
 
 const NotFound = styled.div`
@@ -254,11 +274,13 @@ const ImageColumn = styled.div`
 
   ${responsiveStyle({
     mobile: css`
-      gap: 8px;
+      --thumb-gap: 12px;
+      gap: var(--thumb-gap);
       width: 100%;
     `,
     desktop: css`
-      gap: 16px;
+      --thumb-gap: 20px;
+      gap: var(--thumb-gap);
       flex: 1;
     `,
   })}
@@ -267,21 +289,9 @@ const ImageColumn = styled.div`
 const ThumbnailList = styled.div`
   display: flex;
   flex-direction: column;
-  overflow-y: auto;
   flex-shrink: 0;
-
-  ${responsiveStyle({
-    mobile: css`
-      width: 84px;
-      gap: 8px;
-      max-height: 480px;
-    `,
-    desktop: css`
-      width: 120px;
-      gap: 12px;
-      max-height: 640px;
-    `,
-  })}
+  gap: var(--thumb-gap);
+  width: calc((100% - var(--thumb-gap) * 3.828) / 6);
 `;
 
 const ThumbnailItem = styled.div<{ $isActive: boolean }>`
@@ -315,6 +325,7 @@ const ThumbnailPlaceholder = styled.div`
 
 const MainImageWrapper = styled.div`
   flex: 1;
+  min-width: 0;
   aspect-ratio: 1 / 1.414;
   overflow: hidden;
 `;
@@ -351,6 +362,7 @@ const WorkTitle = styled.h3`
   color: ${COLORS.brand.primary};
   font-weight: 700;
   line-height: 1.3;
+  text-align: left;
 
   ${responsiveStyle({
     mobile: css`font-size: 16px;`,
@@ -362,6 +374,7 @@ const Description = styled.p`
   color: ${COLORS.text.secondary};
   line-height: 1.6;
   white-space: pre-line;
+  text-align: left;
 
   ${responsiveStyle({
     mobile: css`
