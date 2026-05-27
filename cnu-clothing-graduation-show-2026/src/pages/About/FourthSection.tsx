@@ -124,7 +124,7 @@ const NameList = styled.div`
   
   span {
     ${responsiveStyle({
-      mobile: css`font-size: 1.0rem;`,
+      mobile: css`font-size: 0.8rem;`,
       desktop: css`font-size: 1.1rem;`,
     })}
     color: ${COLORS.text.secondary};
