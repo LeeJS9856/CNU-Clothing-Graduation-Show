@@ -17,7 +17,9 @@ const FourthSection = () => {
             {/* 좌상 - 위원장 */}
             <CommitteeBox>
               <DeptName>위원장</DeptName>
-              <NameList>이름</NameList>
+              <NameList>
+                <span>이름</span>
+              </NameList>
             </CommitteeBox>
 
             {/* 우상 - 관리부 */}
@@ -106,9 +108,11 @@ const GridContainer = styled.div`
 const CommitteeBox = styled.div`
   display: flex;
   align-items: flex-start; /* 상단 정렬 */
+  justify-content: space-between;
 `;
 
 const DeptName = styled.div`
+    flex: 1;
     text-align: left;
     margin-right: 40px;
     font-size: 1.1rem;
@@ -118,13 +122,15 @@ const DeptName = styled.div`
 `;
 
 const NameList = styled.div`
+  flex: 1;
   display: flex;
   flex-direction: column;
   gap: 12px;
+  text-align: left;
   
   span {
     ${responsiveStyle({
-      mobile: css`font-size: 0.8rem;`,
+      mobile: css`font-size: 1.0rem;`,
       desktop: css`font-size: 1.1rem;`,
     })}
     color: ${COLORS.text.secondary};
