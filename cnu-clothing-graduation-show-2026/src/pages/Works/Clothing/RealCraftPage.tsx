@@ -113,11 +113,11 @@ const WorksGrid = styled.div`
   ${responsiveStyle({
     mobile: css`
       grid-template-columns: repeat(3, 1fr);
-      gap: 12px;
+      gap: 16px;
     `,
     desktop: css`
       grid-template-columns: repeat(3, 1fr);
-      gap: 40px;
+      gap: 60px;
     `,
   })}
 `;
@@ -127,6 +127,7 @@ const WorkCard = styled.div`
   flex-direction: column;
   align-items: flex-start;
   text-align: left;
+  max-width: 240px;
 `;
 
 const Thumbnail = styled.div`
