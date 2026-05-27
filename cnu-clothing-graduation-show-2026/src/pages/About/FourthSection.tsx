@@ -18,7 +18,7 @@ const FourthSection = () => {
             <CommitteeBox>
               <DeptName>위원장</DeptName>
               <NameList>
-                <span>이름</span>
+                <p>이름</p>
               </NameList>
             </CommitteeBox>
 
@@ -26,9 +26,9 @@ const FourthSection = () => {
             <CommitteeBox>
               <DeptName>관리부</DeptName>
               <NameList>
-                <span>이름</span>
-                <span>이름</span>
-                <span>이름</span>
+                <p>이름</p>
+                <p>이름</p>
+                <p>이름</p>
               </NameList>
             </CommitteeBox>
 
@@ -36,9 +36,9 @@ const FourthSection = () => {
             <CommitteeBox>
               <DeptName>기획부</DeptName>
               <NameList>
-                <span>이름</span>
-                <span>이름</span>
-                <span>이름</span>
+                <p>이름</p>
+                <p>이름</p>
+                <p>이름</p>
               </NameList>
             </CommitteeBox>
 
@@ -46,10 +46,10 @@ const FourthSection = () => {
             <CommitteeBox>
               <DeptName>홍보부</DeptName>
               <NameList>
-                <span>이름</span>
-                <span>이름</span>
-                <span>이름</span>
-                <span>이름</span>
+                <p>이름</p>
+                <p>이름</p>
+                <p>이름</p>
+                <p>이름</p>
               </NameList>
             </CommitteeBox>
           </GridContainer>
@@ -127,14 +127,13 @@ const NameList = styled.div`
   gap: 12px;
   text-align: left;
   
-  span {
+  p {
     ${responsiveStyle({
       mobile: css`font-size: 1.0rem;`,
       desktop: css`font-size: 1.1rem;`,
     })}
     color: ${COLORS.text.secondary};
     font-weight: 400;
-    line-height: 1;
   }
 `;
 
