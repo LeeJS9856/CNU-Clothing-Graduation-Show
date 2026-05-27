@@ -34,10 +34,13 @@ const CATEGORIES: Category[] = [
 const WorksPage = (): React.JSX.Element => {
   const navigate = useNavigate();
   const [hoveredLabel, setHoveredLabel] = useState<string | null>(null);
+  const [expandedLabel, setExpandedLabel] = useState<string | null>(null);
 
   const handleCategoryClick = (category: Category) => {
-    // 하위 카테고리가 있으면 직접 라우팅하지 않음 (hover 메뉴에서 선택)
-    if (category.subCategories) return;
+    if (category.subCategories) {
+      setExpandedLabel((prev) => (prev === category.label ? null : category.label));
+      return;
+    }
     if (category.path) navigate(category.path);
   };
 
@@ -47,7 +50,9 @@ const WorksPage = (): React.JSX.Element => {
         <CategoryList>
           {CATEGORIES.map((category, index) => {
             const isHovered = hoveredLabel === category.label;
+            const isExpanded = expandedLabel === category.label;
             const hasSub = !!category.subCategories;
+            const isVisible = hasSub && (isHovered || isExpanded);
 
             return (
               <CategoryRow
@@ -61,7 +66,7 @@ const WorksPage = (): React.JSX.Element => {
                 </CategoryItem>
 
                 {hasSub && (
-                  <SubCategoryWrapper $isVisible={isHovered}>
+                  <SubCategoryWrapper $isVisible={isVisible}>
                     {category.subCategories!.map((sub) => (
                       <SubCategoryItem
                         key={sub.label}
