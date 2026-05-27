@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import styled, { css } from 'styled-components';
+import styled, { css, keyframes } from 'styled-components';
 import { responsiveStyle } from '@/styles/responsive';
 import Layout from '@/components/layout/Layout';
 import { COLORS } from '@/constants/colors';
@@ -17,9 +17,10 @@ const MagazinePage = (): React.JSX.Element => {
         <CategoryTitle>매거진</CategoryTitle>
 
         <WorksGrid>
-          {MAGAZINE_WORKS.map((work) => (
+          {MAGAZINE_WORKS.map((work, index) => (
             <WorkCard
               key={work.id}
+              style={{ animationDelay: `${0.2 + index * 0.07}s` }}
               onClick={() => navigate(`/works/${CATEGORY}/${work.id}`)}
             >
               <ThumbnailWrapper>
@@ -39,6 +40,11 @@ const MagazinePage = (): React.JSX.Element => {
   );
 };
 
+const fadeInUp = keyframes`
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+`;
+
 const Content = styled.div`
   width: 100%;
   display: flex;
@@ -54,6 +60,9 @@ const CategoryTitle = styled.h2`
   color: ${COLORS.brand.primary};
   line-height: 1;
   text-align: left;
+  opacity: 0;
+  animation: ${fadeInUp} 0.8s ease forwards;
+  animation-delay: 0.1s;
 
   ${responsiveStyle({
     mobile: css`
@@ -90,6 +99,8 @@ const WorkCard = styled.div`
   text-align: left;
   max-width: 240px;
   cursor: pointer;
+  opacity: 0;
+  animation: ${fadeInUp} 0.8s ease forwards;
 `;
 
 const ThumbnailWrapper = styled.div`

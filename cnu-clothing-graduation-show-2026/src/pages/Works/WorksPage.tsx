@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import styled, { css } from 'styled-components';
+import styled, { css, keyframes } from 'styled-components';
 import { responsiveStyle } from '@/styles/responsive';
 import Layout from '@/components/layout/Layout';
 import { COLORS } from '@/constants/colors';
@@ -45,13 +45,14 @@ const WorksPage = (): React.JSX.Element => {
     <Layout>
       <Content>
         <CategoryList>
-          {CATEGORIES.map((category) => {
+          {CATEGORIES.map((category, index) => {
             const isHovered = hoveredLabel === category.label;
             const hasSub = !!category.subCategories;
 
             return (
               <CategoryRow
                 key={category.label}
+                style={{ animationDelay: `${0.1 + index * 0.1}s` }}
                 onMouseEnter={() => setHoveredLabel(category.label)}
                 onMouseLeave={() => setHoveredLabel(null)}
               >
@@ -80,6 +81,11 @@ const WorksPage = (): React.JSX.Element => {
   );
 };
 
+const fadeInUp = keyframes`
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+`;
+
 const Content = styled.div`
   flex: 1;
   width: 100%;
@@ -104,6 +110,8 @@ const CategoryRow = styled.li`
   display: flex;
   flex-direction: column;
   align-items: center;
+  opacity: 0;
+  animation: ${fadeInUp} 0.8s ease forwards;
   ${responsiveStyle({
     mobile: css`gap: 8px;`,
     desktop: css`gap: 16px;`,
