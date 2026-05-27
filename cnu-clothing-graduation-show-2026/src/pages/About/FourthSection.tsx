@@ -17,16 +17,18 @@ const FourthSection = () => {
             {/* 좌상 - 위원장 */}
             <CommitteeBox>
               <DeptName>위원장</DeptName>
-              <NameList>이름</NameList>
+              <NameList>
+                <p>이름</p>
+              </NameList>
             </CommitteeBox>
 
             {/* 우상 - 관리부 */}
             <CommitteeBox>
               <DeptName>관리부</DeptName>
               <NameList>
-                <span>이름</span>
-                <span>이름</span>
-                <span>이름</span>
+                <p>이름</p>
+                <p>이름</p>
+                <p>이름</p>
               </NameList>
             </CommitteeBox>
 
@@ -34,9 +36,9 @@ const FourthSection = () => {
             <CommitteeBox>
               <DeptName>기획부</DeptName>
               <NameList>
-                <span>이름</span>
-                <span>이름</span>
-                <span>이름</span>
+                <p>이름</p>
+                <p>이름</p>
+                <p>이름</p>
               </NameList>
             </CommitteeBox>
 
@@ -44,10 +46,10 @@ const FourthSection = () => {
             <CommitteeBox>
               <DeptName>홍보부</DeptName>
               <NameList>
-                <span>이름</span>
-                <span>이름</span>
-                <span>이름</span>
-                <span>이름</span>
+                <p>이름</p>
+                <p>이름</p>
+                <p>이름</p>
+                <p>이름</p>
               </NameList>
             </CommitteeBox>
           </GridContainer>
@@ -106,30 +108,32 @@ const GridContainer = styled.div`
 const CommitteeBox = styled.div`
   display: flex;
   align-items: flex-start; /* 상단 정렬 */
+  justify-content: space-between;
 `;
 
 const DeptName = styled.div`
+    flex: 1;
     text-align: left;
-    margin-right: 40px;
-    font-size: 1.1rem;
+    font-size: 1.0rem;
     font-weight: 500;
     color: ${COLORS.primary};
     flex-shrink: 0;
 `;
 
 const NameList = styled.div`
+  flex: 1;
   display: flex;
   flex-direction: column;
   gap: 12px;
+  text-align: left;
   
-  span {
+  p {
     ${responsiveStyle({
-      mobile: css`font-size: 0.8rem;`,
+      mobile: css`font-size: 1.0rem;`,
       desktop: css`font-size: 1.1rem;`,
     })}
     color: ${COLORS.text.secondary};
     font-weight: 400;
-    line-height: 1;
   }
 `;
 
