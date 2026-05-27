@@ -42,6 +42,7 @@ const SubNavbarWrapper = styled.nav`
 
 const NavList = styled.ul`
   display: flex;
+  background-color: ${COLORS.gray.light};
   gap: 30px;
   list-style: none;
   padding: 0;
@@ -53,6 +54,7 @@ const NavItem = styled.li<{ $isActive: boolean }>`
   color: ${COLORS.primary};
   cursor: pointer;
   letter-spacing: 0.01em;
+  background-color: ${COLORS.gray.light};
   
   /* 폰트 굵기 변화 애니메이션 */
   font-weight: ${(props) => (props.$isActive ? '800' : '500')};
