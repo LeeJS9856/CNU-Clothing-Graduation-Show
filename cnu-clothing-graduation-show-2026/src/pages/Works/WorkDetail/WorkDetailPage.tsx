@@ -33,6 +33,16 @@ const CATEGORY_LABELS: Record<string, string> = {
   'smart-textile': '스마트 텍스타일',
 };
 
+const CATEGORY_LIST_PATHS: Record<string, string> = {
+  'branding': '/works/branding',
+  'magazine': '/works/magazine',
+  'clothing-real': '/works/clothing/real',
+  'clothing-digital': '/works/clothing/digital',
+  'traditional': '/works/traditional',
+  'fashion-design': '/works/fashion-design',
+  'smart-textile': '/works/smart-textile',
+};
+
 const WorkDetailPage = (): React.JSX.Element => {
   const navigate = useNavigate();
   const { category = '', id = '' } = useParams<{ category: string; id: string }>();
@@ -41,6 +51,9 @@ const WorkDetailPage = (): React.JSX.Element => {
   const currentWork = works.find((w) => w.id === numericId);
   const isClothing = category === 'clothing-real' || category === 'clothing-digital';
   const categoryLabel = CATEGORY_LABELS[category] ?? '';
+  const categoryListPath = CATEGORY_LIST_PATHS[category] ?? '/works';
+
+  const handleBack = () => navigate(categoryListPath);
 
   return (
     <Layout>
@@ -65,7 +78,7 @@ const WorkDetailPage = (): React.JSX.Element => {
           </SubTabBar>
         )}
 
-        <BackButton onClick={() => navigate(-1)}>{'<'}</BackButton>
+        <BackButton onClick={handleBack}>{'<'}</BackButton>
 
         {!currentWork ? (
           <NotFound>작품을 찾을 수 없습니다.</NotFound>
@@ -78,7 +91,7 @@ const WorkDetailPage = (): React.JSX.Element => {
                     <ThumbnailItem
                       key={work.id}
                       $isActive={work.id === currentWork.id}
-                      onClick={() => navigate(`/works/${category}/${work.id}`)}
+                      onClick={() => navigate(`/works/${category}/${work.id}`, { replace: true })}
                     >
                       {work.image ? (
                         <ThumbnailImg src={work.image} alt={work.title} />
