@@ -4,12 +4,9 @@ import styled, { css } from 'styled-components';
 import { responsiveStyle } from '@/styles/responsive';
 import Layout from '@/components/layout/Layout';
 import { COLORS } from '@/constants/colors';
+import { CLOTHING_REAL_WORKS } from '@/data/works/clothing-real';
 
-const WORKS = [
-  { id: 1, title: '작품명', artist: '박다미' },
-  { id: 2, title: '작품명', artist: '박재빈' },
-  { id: 3, title: '작품명', artist: '서은서' },
-];
+const CATEGORY = 'clothing-real';
 
 const RealCraftPage = (): React.JSX.Element => {
   const navigate = useNavigate();
@@ -30,9 +27,18 @@ const RealCraftPage = (): React.JSX.Element => {
         </SubTabBar>
 
         <WorksGrid>
-          {WORKS.map((work) => (
-            <WorkCard key={work.id}>
-              <Thumbnail />
+          {CLOTHING_REAL_WORKS.map((work) => (
+            <WorkCard
+              key={work.id}
+              onClick={() => navigate(`/works/${CATEGORY}/${work.id}`)}
+            >
+              <ThumbnailWrapper>
+                {work.image ? (
+                  <ThumbnailImg src={work.image} alt={work.title} />
+                ) : (
+                  <ThumbnailPlaceholder />
+                )}
+              </ThumbnailWrapper>
               <WorkTitle>{work.title}</WorkTitle>
               <ArtistName>{work.artist}</ArtistName>
             </WorkCard>
@@ -128,16 +134,31 @@ const WorkCard = styled.div`
   align-items: flex-start;
   text-align: left;
   max-width: 240px;
+  cursor: pointer;
 `;
 
-const Thumbnail = styled.div`
+const ThumbnailWrapper = styled.div`
   width: 100%;
-  aspect-ratio: 3 / 4;
-  background-color: ${COLORS.gray.light};
+  aspect-ratio: 1 / 1.414;
+  overflow: hidden;
+  cursor: pointer;
   ${responsiveStyle({
     mobile: css`margin-bottom: 8px;`,
     desktop: css`margin-bottom: 16px;`,
   })}
+`;
+
+const ThumbnailImg = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+`;
+
+const ThumbnailPlaceholder = styled.div`
+  width: 100%;
+  height: 100%;
+  background-color: ${COLORS.gray.light};
 `;
 
 const WorkTitle = styled.h3`

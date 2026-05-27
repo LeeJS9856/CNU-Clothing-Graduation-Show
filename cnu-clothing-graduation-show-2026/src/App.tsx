@@ -13,6 +13,7 @@ import DigitalClothingPage from './pages/Works/Clothing/DigitalClothingPage';
 import TraditionalPage from './pages/Works/Traditional/TraditionalPage';
 import FashionDesignPage from './pages/Works/FashionDesign/FashionDesignPage';
 import SmartTextilePage from './pages/Works/SmartTextile/SmartTextilePage';
+import WorkDetailPage from './pages/Works/WorkDetail/WorkDetailPage';
 
 const App = () => {
     return (
@@ -31,6 +32,7 @@ const App = () => {
                 <Route path="/works/traditional" element={<TraditionalPage />} />
                 <Route path="/works/fashion-design" element={<FashionDesignPage />} />
                 <Route path="/works/smart-textile" element={<SmartTextilePage />} />
+                <Route path="/works/:category/:id" element={<WorkDetailPage />} />
             </Routes>
         </Router>
     );

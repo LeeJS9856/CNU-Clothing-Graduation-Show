@@ -1,25 +1,34 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import styled, { css } from 'styled-components';
 import { responsiveStyle } from '@/styles/responsive';
 import Layout from '@/components/layout/Layout';
 import { COLORS } from '@/constants/colors';
+import { SMART_TEXTILE_WORKS } from '@/data/works/smart-textile';
 
-const WORKS = [
-  { id: 1, title: '작품명', artist: '작가명' },
-  { id: 2, title: '작품명', artist: '작가명' },
-  { id: 3, title: '작품명', artist: '작가명' },
-];
+const CATEGORY = 'smart-textile';
 
 const SmartTextilePage = (): React.JSX.Element => {
+  const navigate = useNavigate();
+
   return (
     <Layout>
       <Content>
         <CategoryTitle>스마트 텍스타일</CategoryTitle>
 
         <WorksGrid>
-          {WORKS.map((work) => (
-            <WorkCard key={work.id}>
-              <Thumbnail />
+          {SMART_TEXTILE_WORKS.map((work) => (
+            <WorkCard
+              key={work.id}
+              onClick={() => navigate(`/works/${CATEGORY}/${work.id}`)}
+            >
+              <ThumbnailWrapper>
+                {work.image ? (
+                  <ThumbnailImg src={work.image} alt={work.title} />
+                ) : (
+                  <ThumbnailPlaceholder />
+                )}
+              </ThumbnailWrapper>
               <WorkTitle>{work.title}</WorkTitle>
               <ArtistName>{work.artist}</ArtistName>
             </WorkCard>
@@ -80,16 +89,31 @@ const WorkCard = styled.div`
   align-items: flex-start;
   text-align: left;
   max-width: 240px;
+  cursor: pointer;
 `;
 
-const Thumbnail = styled.div`
+const ThumbnailWrapper = styled.div`
   width: 100%;
-  aspect-ratio: 3 / 4;
-  background-color: ${COLORS.gray.light};
+  aspect-ratio: 1 / 1.414;
+  overflow: hidden;
+  cursor: pointer;
   ${responsiveStyle({
     mobile: css`margin-bottom: 8px;`,
     desktop: css`margin-bottom: 16px;`,
   })}
+`;
+
+const ThumbnailImg = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+`;
+
+const ThumbnailPlaceholder = styled.div`
+  width: 100%;
+  height: 100%;
+  background-color: ${COLORS.gray.light};
 `;
 
 const WorkTitle = styled.h3`
