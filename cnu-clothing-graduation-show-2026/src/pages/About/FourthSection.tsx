@@ -114,7 +114,6 @@ const CommitteeBox = styled.div`
 const DeptName = styled.div`
     flex: 1;
     text-align: left;
-    margin-right: 40px;
     font-size: 1.0rem;
     font-weight: 500;
     color: ${COLORS.primary};
