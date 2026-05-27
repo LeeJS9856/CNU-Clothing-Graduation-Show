@@ -23,16 +23,48 @@ const CATEGORY_WORKS: Record<string, Work[]> = {
   'smart-textile': SMART_TEXTILE_WORKS,
 };
 
+const CATEGORY_LABELS: Record<string, string> = {
+  'branding': '브랜딩',
+  'magazine': '매거진',
+  'clothing-real': '의복구성',
+  'clothing-digital': '의복구성',
+  'traditional': '전통복식',
+  'fashion-design': '패션디자인',
+  'smart-textile': '스마트 텍스타일',
+};
+
 const WorkDetailPage = (): React.JSX.Element => {
   const navigate = useNavigate();
   const { category = '', id = '' } = useParams<{ category: string; id: string }>();
   const works = CATEGORY_WORKS[category] ?? [];
   const numericId = Number(id);
   const currentWork = works.find((w) => w.id === numericId);
+  const isClothing = category === 'clothing-real' || category === 'clothing-digital';
+  const categoryLabel = CATEGORY_LABELS[category] ?? '';
 
   return (
     <Layout>
       <Content>
+        {categoryLabel && (
+          <CategoryTitle $compact={isClothing}>{categoryLabel}</CategoryTitle>
+        )}
+        {isClothing && (
+          <SubTabBar>
+            <SubTab
+              $isActive={category === 'clothing-real'}
+              onClick={() => navigate('/works/clothing/real')}
+            >
+              실물제작
+            </SubTab>
+            <SubTab
+              $isActive={category === 'clothing-digital'}
+              onClick={() => navigate('/works/clothing/digital')}
+            >
+              디지털 클로딩
+            </SubTab>
+          </SubTabBar>
+        )}
+
         <BackButton onClick={() => navigate(-1)}>{'<'}</BackButton>
 
         {!currentWork ? (
@@ -88,6 +120,71 @@ const Content = styled.div`
     mobile: css`padding: 0 0 40px;`,
     desktop: css`padding: 0 0 80px;`,
   })}
+`;
+
+const CategoryTitle = styled.h2<{ $compact: boolean }>`
+  font-weight: 700;
+  color: ${COLORS.brand.primary};
+  line-height: 1;
+  text-align: left;
+
+  ${({ $compact }) =>
+    $compact
+      ? responsiveStyle({
+          mobile: css`
+            font-size: 18px;
+            margin-bottom: 16px;
+          `,
+          desktop: css`
+            font-size: 27px;
+            margin-bottom: 32px;
+          `,
+        })
+      : responsiveStyle({
+          mobile: css`
+            font-size: 18px;
+            margin-bottom: 32px;
+          `,
+          desktop: css`
+            font-size: 27px;
+            margin-bottom: 56px;
+          `,
+        })}
+`;
+
+const SubTabBar = styled.div`
+  display: flex;
+  align-items: center;
+
+  ${responsiveStyle({
+    mobile: css`
+      gap: 16px;
+      margin-bottom: 32px;
+    `,
+    desktop: css`
+      gap: 32px;
+      margin-bottom: 56px;
+    `,
+  })}
+`;
+
+const SubTab = styled.span<{ $isActive: boolean }>`
+  color: ${COLORS.brand.primary};
+  cursor: pointer;
+  line-height: 1;
+  font-weight: ${({ $isActive }) => ($isActive ? 700 : 500)};
+  text-decoration: ${({ $isActive }) => ($isActive ? 'underline' : 'none')};
+  text-underline-offset: 6px;
+  transition: opacity 0.2s;
+
+  ${responsiveStyle({
+    mobile: css`font-size: 13px;`,
+    desktop: css`font-size: 18px;`,
+  })}
+
+  &:hover {
+    opacity: 0.7;
+  }
 `;
 
 const BackButton = styled.button`
