@@ -272,12 +272,12 @@ const ThumbnailList = styled.div`
 
   ${responsiveStyle({
     mobile: css`
-      width: 56px;
+      width: 84px;
       gap: 8px;
       max-height: 480px;
     `,
     desktop: css`
-      width: 80px;
+      width: 120px;
       gap: 12px;
       max-height: 640px;
     `,
@@ -287,6 +287,7 @@ const ThumbnailList = styled.div`
 const ThumbnailItem = styled.div<{ $isActive: boolean }>`
   width: 100%;
   aspect-ratio: 1 / 1.414;
+  flex-shrink: 0;
   cursor: pointer;
   overflow: hidden;
   border: ${({ $isActive }) =>
@@ -341,7 +342,7 @@ const InfoColumn = styled.div`
     `,
     desktop: css`
       flex: 1;
-      max-width: 360px;
+      max-width: 480px;
     `,
   })}
 `;
@@ -360,6 +361,7 @@ const WorkTitle = styled.h3`
 const Description = styled.p`
   color: ${COLORS.text.secondary};
   line-height: 1.6;
+  white-space: pre-line;
 
   ${responsiveStyle({
     mobile: css`
