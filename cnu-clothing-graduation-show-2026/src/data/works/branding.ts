@@ -40,7 +40,7 @@ export const BRANDING_WORKS: Work[] = [
     ],
   },
   {
-    id: 4,
+    id: 4,  
     title: 'VIVID ALIEN',
     artist: '이채영',
     description: `단순한 관광을 넘어 몸과 마음이 회복되는 여행, 그 여정의 중심에 러닝이 있습니다.
