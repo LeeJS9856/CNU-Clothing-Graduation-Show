@@ -73,9 +73,13 @@ D.WooRKS 옷은 과장된 장식이 아닌, 기능에서 비롯된 디테일과 
     images: [
       '/images/works/branding/5/1.jpg',
       '/images/works/branding/5/2.jpg',
+      '/images/works/branding/5/3.jpg',
       '/images/works/branding/5/4.jpg',
       '/images/works/branding/5/5.jpg',
       '/images/works/branding/5/6.jpg',
+      '/images/works/branding/5/7.jpg',
+      '/images/works/branding/5/8.jpg',
+      '/images/works/branding/5/9.jpg',
     ],
   },
   {
