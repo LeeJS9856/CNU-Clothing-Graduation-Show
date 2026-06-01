@@ -20,7 +20,11 @@ export const TRADITIONAL_WORKS: Work[] = [
     artist: '전채영',
     description: `하늘을 유영하는 구름은 머무르지 않지만, 청자 위에서는 영원한 문양으로 남아 있다.
 운무(雲舞)는 고려시대 청자 상감운학문 속 구름 문양과 비색의 깊은 여운에서 영감을 받아 제작한 한국복식 작품이다. 구름의 부드러운 곡선과 청자의 고요한 색감을 한복의 선과 겹에 담아 전통의 우아함을 현대적으로 표현하였다.`,
-    images: ['/images/works/traditional/2/1.jpg'],
+    images: [
+      '/images/works/traditional/2/1.jpg',
+      '/images/works/traditional/2/2.jpg',
+      '/images/works/traditional/2/3.jpg',
+    ],
   },
   {
     id: 3,

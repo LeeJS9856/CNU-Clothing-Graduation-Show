@@ -12,7 +12,14 @@ export const FASHION_DESIGN_WORKS: Work[] = [
 아름답지만 어딘가 불편함을 남기는 형태와 확대된 신체를 연상시키는 소재를 통해, 사람들이 숨기고 싶어 하는 감정과 콤플렉스가 타인의 시선 속에서 과장되고 집중되는 순간을 표현하였다. 겉으로는 부드럽고 아름답게 보이지만 가까이에서 볼수록 낯설고 불편한 감각이 느껴지도록 구성함으로써, 무심코 소비되는 말과 시선이 타인에게는 예상보다 무겁게 남을 수 있는 순간을 드러내고자 했다.
 
 이 작업은 일상 속에서 쉽게 지나쳐지는 감정의 틈과 관계 속의 미묘한 불편함을 시각적으로 풀어낸 작업이다.`,
-    images: ['/images/works/fashion-design/1/1.jpg'],
+    images: [
+      '/images/works/fashion-design/1/1.jpg',
+      '/images/works/fashion-design/1/2.jpg',
+      '/images/works/fashion-design/1/3.jpg',
+      '/images/works/fashion-design/1/4.jpg',
+      '/images/works/fashion-design/1/5.jpg',
+      '/images/works/fashion-design/1/6.jpg',
+    ],
   },
   {
     id: 2,
@@ -34,14 +41,29 @@ export const FASHION_DESIGN_WORKS: Work[] = [
 본 컬렉션은 빛을 막아설 때 비로소 선명해지는 그림자의 존재감처럼, 비어 있는 듯하지만 가득 찬 '빛의 공백'을 담고 있습니다. 실체보다 더 짙은 여운을 남기는 그림자의 흐름을 통해 보이지 않는 것이 만들어낸 본질을 탐구하고자 합니다.
 
 단순히 눈에 보이는 형태를 재현하는 것에 그치지 않고, 그 뒤에 남는 흐름과 분위기에 대한 이야기를 담았습니다. 작품을 마주하는 이들이 형태 이후에 남겨지는 감각과 잔상을 따라가며, 각자의 기억과 감정 속에 잠재된 또 다른 그림자를 마주할 수 있기를 바랍니다.`,
-    images: ['/images/works/fashion-design/2/1.jpg'],
+    images: [
+      '/images/works/fashion-design/2/1.jpg',
+      '/images/works/fashion-design/2/2.jpg',
+      '/images/works/fashion-design/2/3.jpg',
+      '/images/works/fashion-design/2/4.jpg',
+      '/images/works/fashion-design/2/5.jpg',
+      '/images/works/fashion-design/2/6.jpg',
+      '/images/works/fashion-design/2/7.jpg',
+      '/images/works/fashion-design/2/8.jpg',
+    ],
   },
   {
     id: 3,
     title: '아담과 이브',
     artist: '우수종',
     description: '우리는 일상생활 중 수많은 ’뱀‘을 만나고, 흔들리며, 선택한다. 달콤한 선악과는 시간이 지나 쓴맛을 낸다. 악을 숨기며 선을 내비치는지, 아니면 당신도 모르게 악에 잡아먹히는지 고민해보자.',
-    images: ['/images/works/fashion-design/3/1.jpg'],
+    images: [
+      '/images/works/fashion-design/3/1.jpg',
+      '/images/works/fashion-design/3/2.jpg',
+      '/images/works/fashion-design/3/3.jpg',
+      '/images/works/fashion-design/3/4.jpg',
+      '/images/works/fashion-design/3/5.jpg',
+    ],
   },
   {
     id: 4,
@@ -56,7 +78,16 @@ export const FASHION_DESIGN_WORKS: Work[] = [
 작품의 실루엣은 단순히 형태를 빚는 것에 그치지 않고, 감정이 조형화되는 물리적 행위인 ‘구기고, 쌓고, 굳히는’ 수행적 과정을 통해 구현되었습니다. 특히 ‘구김’은 감정이 외부의 압력이나 내부의 갈등과 충돌할 때 발생하는 비정형의 에너지를 드러냅니다. 매끄러운 원단을 의도적으로 굴절시키는 행위는 가공되지 않은 날 것의 감정이 자아와 부딪히며 만들어낸 복잡한 주름과 저항의 흔적을 실루엣에 각인하는 과정입니다.
 
 본 전시를 통해 관람객은 무형의 감정이 의상이라는 물리적 경계를 만나 실존하는 과정을 마주하게 됩니다. 뾰족함이 무뎌져 둥글게 변모하고, 흩어진 파편들이 굳어져 형성된 이 실루엣들은 우리 모두가 지닌 ‘성숙한 자아의 지표’입니다.`,
-    images: ['/images/works/fashion-design/4/1.jpg'],
+    images: [
+      '/images/works/fashion-design/4/1.jpg',
+      '/images/works/fashion-design/4/2.jpg',
+      '/images/works/fashion-design/4/3.jpg',
+      '/images/works/fashion-design/4/4.jpg',
+      '/images/works/fashion-design/4/5.jpg',
+      '/images/works/fashion-design/4/6.jpg',
+      '/images/works/fashion-design/4/7.jpg',
+      '/images/works/fashion-design/4/8.jpg',
+    ],
   },
   {
     id: 5,
@@ -76,6 +107,14 @@ export const FASHION_DESIGN_WORKS: Work[] = [
 또한 비정형적인 주름과 subtraction cutting을 활용해 신체를 자연스럽게 따라가기보다는 일부러 어긋나는 구조를 만들었다. 특히 원단에 생긴 구멍들이 서로 연결되면서 또 다른 구멍을 만들어내는 방식으로, 형태가 계속 변형되는 구조를 형성했다. 이는 결핍을 감추려는 시도가 오히려 또 다른 결핍을 만들어내는 상황을 드러낸다. 결국 완전한 형태에 도달할 수 없는 상태를 보여준다.
 
 결과적으로 이 작업은 의도된 구조 안에서 생기는 작은 어긋남과 그로 인한 변화를 통해 ‘조용한 왜곡’을 드러내고자 한다.`,
-    images: ['/images/works/fashion-design/6/1.jpg'],
+    images: [
+      '/images/works/fashion-design/6/1.jpg',
+      '/images/works/fashion-design/6/2.jpg',
+      '/images/works/fashion-design/6/3.jpg',
+      '/images/works/fashion-design/6/4.jpg',
+      '/images/works/fashion-design/6/5.jpg',
+      '/images/works/fashion-design/6/6.jpg',
+      '/images/works/fashion-design/6/7.jpg',
+    ],
   },
 ];

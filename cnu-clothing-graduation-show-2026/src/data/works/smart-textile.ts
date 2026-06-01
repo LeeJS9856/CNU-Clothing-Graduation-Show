@@ -7,14 +7,23 @@ export const SMART_TEXTILE_WORKS: Work[] = [
     artist: '강지원',
     description: `현대 도시의 끊임없는 소음 공해 속에서 개인은 심리적 피로감을 느끼며 자신만의 공간을 갈망합니다. 기존의 노이즈 캔슬링 기기들이 단순히 청각만을 차단했다면, [THE MUTE ZONE]은 의복을 통해 시각적·공간적 단절을 제공하는 '웨어러블 안식처'를 제안합니다.
 이 작품은 실시간으로 주변 소음 데시벨(dB)을 측정하여, 기준치 이상의 소음 발생 시 착용자의 목덜미에 진동 알림을 전달합니다. 착용자가 진동을 느끼고 거대한 후드를 뒤집어쓰는 행위는 능동적으로 외부 자극으로부터 자신을 분리하는 의식이 됩니다. 특히 몸을 넉넉하게 감싸는 오버사이즈 판초 실루엣은 외부의 소란과 나 사이의 유연한 경계를 구축하며, 소음이 침범할 수 없는 심리적 완충 지대를 시각화합니다. 이는 소음 속에 던져진 개인에게 즉각적인 심리적 안정감과 함께, 오직 나만이 점유할 수 있는 '정적 구역'을 선사합니다.`,
-    images: ['/images/works/smart-textile/1/1.jpg'],
+    images: [
+      '/images/works/smart-textile/1/1.jpg',
+      '/images/works/smart-textile/1/2.jpg',
+      '/images/works/smart-textile/1/3.jpg',
+    ],
   },
   {
     id: 2,
     title: 'RE:BREATHE',
     artist: '박재은',
     description: '고온다습한 기후 환경에서 발생하는 불쾌감을 완화하기 위해 제작된 스마트 의류이다. 의류에 부착된 온도 센서가 착용자의 체온을 감지하면, 내부 미니팬 시스템이 자동으로 작동하여 의복 내부의 열과 습기를 효과적으로 순환시킨다. 본 작품을 통해 착용자는 변화하는 환경 속에서 보다 쾌적한 상태를 유지할 수 있다.',
-    images: ['/images/works/smart-textile/2/1.jpg'],
+    images: [
+      '/images/works/smart-textile/2/1.jpg',
+      '/images/works/smart-textile/2/2.jpg',
+      '/images/works/smart-textile/2/3.jpg',
+      '/images/works/smart-textile/2/4.jpg',
+    ],
   },
   {
     id: 3,
@@ -23,7 +32,11 @@ export const SMART_TEXTILE_WORKS: Work[] = [
     description: `현대 인간의 삶은 AI 기술 없이는 이루어지기 어려울 만큼 밀접하게 변화하고 있다.
 AI 기술이 일상에 자연스럽게 스며든 현대 사회 속 반복적인 AI와의 상호작용으로 인간은 기존의 자아를 넘어 새로운 페르소나를 형성하게 되며, 본 작품은 이러한 변화하는 인간의 정체성과 공존의 관계를 시각적으로 풀어내고자 하였다.
 인체의 중추 구조인 척추에서 신경망이 확장되는 형태를 디자인에 적용하여 인간과 디지털 시스템이 융합된 이미지를 통해 인간과 AI가 공존하는 시대의 새로운 연결성과 확장된 감각 체계를 표현하고자 하였다.`,
-    images: ['/images/works/smart-textile/3/1.jpg'],
+    images: [
+      '/images/works/smart-textile/3/1.jpg',
+      '/images/works/smart-textile/3/2.jpg',
+      '/images/works/smart-textile/3/3.jpg',
+    ],
   },
   {
     id: 4,
