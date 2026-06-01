@@ -1,6 +1,6 @@
 import type { Work } from '@/types/work';
 
-export const MAGAZINE_WORKS: Work[] = [
+export const MEDIA_PRODUCTION_WORKS: Work[] = [
   {
     id: 1,
     title: 'TINY WARDROBE',
@@ -9,9 +9,9 @@ export const MAGAZINE_WORKS: Work[] = [
 현대 키즈 패션 시장의 수많은 브랜드와 감성 중심의 마케팅 속에서 소비자들은 제품의 품질, 브랜드 철학, 소재의 가치, 가격의 타당성을 객관적으로 판단하기 어려운 환경에 놓여 있다. 특히 저출산 시대가 심화될수록 한 아이에게 더 많은 비용과 관심을 투자하는 ‘프리미엄 키즈 시장’은 더욱 확대되고 있으며, 부모들은 단순히 예쁜 옷이 아닌 가치 있고 만족도 높은 브랜드를 찾고 있다.
 “TINY WARDROBE”는 단순한 스타일 제안을 넘어, 부모들이 자신들의 취향과 기준에 맞는 제품을 더욱 쉽게 선택할 수 있도록 돕는 가이드형 매거진을 지향한다. 유아 패션 트렌드 분석, 브랜드 소개, 가격대 비교 등 다양한 콘텐츠를 통해 소비자들에게 실질적인 정보를 제공한다.`,
     images: [
-      '/images/works/magazine/1/1.jpg',
-      '/images/works/magazine/1/2.jpg',
-      '/images/works/magazine/1/3.jpg',
+      '/images/works/media-production/1/1.jpg',
+      '/images/works/media-production/1/2.jpg',
+      '/images/works/media-production/1/3.jpg',
     ],
   },
   {
@@ -20,10 +20,10 @@ export const MAGAZINE_WORKS: Work[] = [
     artist: '이찬미',
     description: `한 사람의 기억이 깃든 사물에는 수많은 자아와 관계의 실타래가 얽혀 있다. 그 기억의 조각들을 통해 스스로를 깊이 이해하고, 성찰하며 타인을 향한 긍정의 시선을 회복한다. 낯선 나를 받아들이고 다른 이와 연결되는 일, Memory Log가 제안하는 '기억을 통한 다정한 연대'의 시작이다.`,
     images: [
-      '/images/works/magazine/2/1.jpg',
-      '/images/works/magazine/2/2.jpg',
-      '/images/works/magazine/2/3.jpg',
-      '/images/works/magazine/2/4.jpg',
+      '/images/works/media-production/2/1.jpg',
+      '/images/works/media-production/2/2.jpg',
+      '/images/works/media-production/2/3.jpg',
+      '/images/works/media-production/2/4.jpg',
     ],
   },
   {
@@ -32,10 +32,10 @@ export const MAGAZINE_WORKS: Work[] = [
     artist: '정다연',
     description: `THE GAZE : Observation Archive는 패션 필름 「THE GAZE」의 비하인드 과정을 기록한 아카이브입니다. “THE GAZE”는 현대사회에서의 시선을 안경이라는 오브제를 통해 풀어내는 실험적 영상으로, 다양한 시선과 관찰의 환경 속에서 인물과 오브제가 어떻게 바라보이고 변화하는지 탐구합니다. 이 아카이브는 바다, 쇼핑몰 복도, 유리문과 거실, 거울방, 모니터룸, 터널 등 여섯 가지 서로 다른 공간에서의 제작 과정을 세심하게 기록합니다. 촬영 현장에서 마주한 우연한 변수, 빛과 환경에 대한 실험, 그로 인해 발생한 고민과 선택, 실패와 협업의 순간들이 담겨 있습니다. 완성된 결과물 너머에 숨은 창작의 과정과 태도, 그리고 현장의 공기가 이 기록을 통해 전해지길 바랍니다.`,
     images: [
-      '/images/works/magazine/3/1.jpg',
-      '/images/works/magazine/3/2.jpg',
-      '/images/works/magazine/3/3.jpg',
-      '/images/works/magazine/3/4.jpg',
+      '/images/works/media-production/3/1.jpg',
+      '/images/works/media-production/3/2.jpg',
+      '/images/works/media-production/3/3.jpg',
+      '/images/works/media-production/3/4.jpg',
     ],
   },
   {
@@ -43,7 +43,7 @@ export const MAGAZINE_WORKS: Work[] = [
     title: 'MUSE AETERNA: AI PERSONA',
     artist: '정설헌',
     description: `AETERNA는 ‘영원한’이라는 의미를 지닌 라틴어로, 본 프로젝트는 생성형 AI를 활용해 패션 하우스의 브랜드 정체성을 가상의 뮤즈로 구현하고, 이를 패션 화보 매거진으로 완성한 작품이다. 각 브랜드의 미학, 뮤즈, 컬렉션 이미지를 분석하여 브랜드 고유의 철학과 분위기를 연구하여 시대와 공간의 제약을 뛰어넘어 영원성을 가지고 브랜드를 지속적으로 대변할 수 있는 가상 엠버서더를 제작하였다. 이후 AI 이미지 생성과 가상 피팅 기술을 활용해 실제 컬렉션 의상을 착장한 룩북 이미지를 구성함으로써, 현실 촬영의 한계를 넘어선 새로운 패션 비주얼을 제안한다. 이 프로젝트는 실존 인물에 의존하던 기존 엠버서더의 한계를 뛰어넘어 브랜드의 철학과 미학을 정교하게 형상화한 디지털 페르소나를 통해 마케팅의 한계를 확장하고자 한다. 최종 결과물은 AI 모델 소개, 제작 과정, 브랜드별 화보 콘셉트가 담긴 고감도 패션 화보 매거진으로, 미래 패션 산업에서 가상 뮤즈와 AI 기반 콘텐츠 제작이 지닌 가능성을 보여준다.`,
-    images: ['/images/works/magazine/4/1.jpg'],
+    images: ['/images/works/media-production/4/1.jpg'],
   },
   {
     id: 5,
@@ -55,11 +55,11 @@ export const MAGAZINE_WORKS: Work[] = [
 이 작품은 사람과 옷이 서로의 시간을 공유하며 존재한다는 관계를 탐구하며, 패션을 단순한 소비재가 아닌 시간과
 경험을 담는 매개체로 바라보고자 한다`,
     images: [
-      '/images/works/magazine/5/1.jpg',
-      '/images/works/magazine/5/2.jpg',
-      '/images/works/magazine/5/3.jpg',
-      '/images/works/magazine/5/4.jpg',
-      '/images/works/magazine/5/5.jpg',
+      '/images/works/media-production/5/1.jpg',
+      '/images/works/media-production/5/2.jpg',
+      '/images/works/media-production/5/3.jpg',
+      '/images/works/media-production/5/4.jpg',
+      '/images/works/media-production/5/5.jpg',
     ],
   },
   {
@@ -68,10 +68,10 @@ export const MAGAZINE_WORKS: Work[] = [
     artist: '최원희',
     description: `본 작품은 ‘감각의 흐름을 통한 재해석’을 주제로 제작한 매거진이다. 시각, 청각, 촉각, 후각, 미각의 다섯 가지 감각을 중심으로 전시와 이미지들을 재구성하며, 감각이 서로 교차하고 확장되는 과정을 표현하였다. 단순한 전시 기록이 아닌, 관람 과정에서 발생하는 개인의 기억과 감정, 감각의 변화를 시각적 언어로 풀어내고자 하였으며, 사라짐과 잔상, 흐름의 감각을 매거진의 편집과 그래픽 요소 전반에 담아 하나의 감각적 경험으로 완성하였다.`,
     images: [
-      '/images/works/magazine/6/1.jpg',
-      '/images/works/magazine/6/2.jpg',
-      '/images/works/magazine/6/3.jpg',
-      '/images/works/magazine/6/4.jpg',
+      '/images/works/media-production/6/1.jpg',
+      '/images/works/media-production/6/2.jpg',
+      '/images/works/media-production/6/3.jpg',
+      '/images/works/media-production/6/4.jpg',
     ],
   },
 ];

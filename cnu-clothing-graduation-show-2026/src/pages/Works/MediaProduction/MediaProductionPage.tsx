@@ -4,20 +4,20 @@ import styled, { css, keyframes } from 'styled-components';
 import { responsiveStyle } from '@/styles/responsive';
 import Layout from '@/components/layout/Layout';
 import { COLORS } from '@/constants/colors';
-import { MAGAZINE_WORKS } from '@/data/works/magazine';
+import { MEDIA_PRODUCTION_WORKS } from '@/data/works/media-production';
 
-const CATEGORY = 'magazine';
+const CATEGORY = 'media-production';
 
-const MagazinePage = (): React.JSX.Element => {
+const MediaProductionPage = (): React.JSX.Element => {
   const navigate = useNavigate();
 
   return (
     <Layout>
       <Content>
-        <CategoryTitle>매거진</CategoryTitle>
+        <CategoryTitle>미디어제작</CategoryTitle>
 
         <WorksGrid>
-          {MAGAZINE_WORKS.map((work, index) => (
+          {MEDIA_PRODUCTION_WORKS.map((work, index) => (
             <WorkCard
               key={work.id}
               style={{ animationDelay: `${0.2 + index * 0.07}s` }}
@@ -155,4 +155,4 @@ const ArtistName = styled.p`
   })}
 `;
 
-export default MagazinePage;
+export default MediaProductionPage;

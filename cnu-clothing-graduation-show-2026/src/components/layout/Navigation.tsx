@@ -18,7 +18,7 @@ const MENUS: MenuItem[] = [
     path: '/works',
     subMenu: [
       { label: '브랜딩', path: '/works/branding' },
-      { label: '매거진', path: '/works/magazine' },
+      { label: '미디어제작', path: '/works/media-production' },
       { label: '의복구성', path: '/works/clothing/real' },
       { label: '전통복식', path: '/works/traditional' },
       { label: '패션디자인', path: '/works/fashion-design' },

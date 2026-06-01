@@ -6,7 +6,7 @@ import Layout from '@/components/layout/Layout';
 import { COLORS } from '@/constants/colors';
 import type { Work } from '@/types/work';
 import { BRANDING_WORKS } from '@/data/works/branding';
-import { MAGAZINE_WORKS } from '@/data/works/magazine';
+import { MEDIA_PRODUCTION_WORKS } from '@/data/works/media-production';
 import { CLOTHING_REAL_WORKS } from '@/data/works/clothing-real';
 import { CLOTHING_DIGITAL_WORKS } from '@/data/works/clothing-digital';
 import { TRADITIONAL_WORKS } from '@/data/works/traditional';
@@ -15,7 +15,7 @@ import { SMART_TEXTILE_WORKS } from '@/data/works/smart-textile';
 
 const CATEGORY_WORKS: Record<string, Work[]> = {
   'branding': BRANDING_WORKS,
-  'magazine': MAGAZINE_WORKS,
+  'media-production': MEDIA_PRODUCTION_WORKS,
   'clothing-real': CLOTHING_REAL_WORKS,
   'clothing-digital': CLOTHING_DIGITAL_WORKS,
   'traditional': TRADITIONAL_WORKS,
@@ -25,7 +25,7 @@ const CATEGORY_WORKS: Record<string, Work[]> = {
 
 const CATEGORY_LABELS: Record<string, string> = {
   'branding': '브랜딩',
-  'magazine': '매거진',
+  'media-production': '미디어제작',
   'clothing-real': '의복구성',
   'clothing-digital': '의복구성',
   'traditional': '전통복식',
@@ -35,7 +35,7 @@ const CATEGORY_LABELS: Record<string, string> = {
 
 const CATEGORY_LIST_PATHS: Record<string, string> = {
   'branding': '/works/branding',
-  'magazine': '/works/magazine',
+  'media-production': '/works/media-production',
   'clothing-real': '/works/clothing/real',
   'clothing-digital': '/works/clothing/digital',
   'traditional': '/works/traditional',

@@ -18,7 +18,7 @@ type Category = {
 
 const CATEGORIES: Category[] = [
   { label: '브랜딩', path: '/works/branding' },
-  { label: '매거진', path: '/works/magazine' },
+  { label: '미디어제작', path: '/works/media-production' },
   {
     label: '의복구성',
     subCategories: [
