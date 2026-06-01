@@ -55,6 +55,13 @@ const WorkDetailPage = (): React.JSX.Element => {
 
   const handleBack = () => navigate(categoryListPath);
 
+  const images = currentWork?.images ?? [];
+  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
+
+  useEffect(() => {
+    setSelectedImageIndex(0);
+  }, [category, numericId]);
+
   const thumbnailListRef = useRef<HTMLDivElement>(null);
   const [showTopFade, setShowTopFade] = useState(false);
   const [showBottomFade, setShowBottomFade] = useState(false);
@@ -71,7 +78,7 @@ const WorkDetailPage = (): React.JSX.Element => {
     updateFades();
     window.addEventListener('resize', updateFades);
     return () => window.removeEventListener('resize', updateFades);
-  }, [updateFades, works]);
+  }, [updateFades, images]);
 
   return (
     <Layout>
@@ -121,24 +128,23 @@ const WorkDetailPage = (): React.JSX.Element => {
                   $showTopFade={showTopFade}
                   $showBottomFade={showBottomFade}
                 >
-                  {works.map((work) => (
+                  {images.map((src, index) => (
                     <ThumbnailItem
-                      key={work.id}
-                      $isActive={work.id === currentWork.id}
-                      onClick={() => navigate(`/works/${category}/${work.id}`, { replace: true })}
+                      key={index}
+                      $isActive={index === selectedImageIndex}
+                      onClick={() => setSelectedImageIndex(index)}
                     >
-                      {work.image ? (
-                        <ThumbnailImg src={work.image} alt={work.title} />
-                      ) : (
-                        <ThumbnailPlaceholder />
-                      )}
+                      <ThumbnailImg src={src} alt={`${currentWork.title} ${index + 1}`} />
                     </ThumbnailItem>
                   ))}
                 </ThumbnailList>
 
                 <MainImageWrapper>
-                  {currentWork.image ? (
-                    <MainImage src={currentWork.image} alt={currentWork.title} />
+                  {images[selectedImageIndex] ? (
+                    <MainImage
+                      src={images[selectedImageIndex]}
+                      alt={currentWork.title}
+                    />
                   ) : (
                     <MainImagePlaceholder />
                   )}
@@ -359,12 +365,6 @@ const ThumbnailImg = styled.img`
   height: 100%;
   object-fit: cover;
   display: block;
-`;
-
-const ThumbnailPlaceholder = styled.div`
-  width: 100%;
-  height: 100%;
-  background-color: ${COLORS.gray.light};
 `;
 
 const MainImageWrapper = styled.div`

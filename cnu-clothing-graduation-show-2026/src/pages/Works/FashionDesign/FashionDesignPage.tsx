@@ -24,8 +24,8 @@ const FashionDesignPage = (): React.JSX.Element => {
               onClick={() => navigate(`/works/${CATEGORY}/${work.id}`)}
             >
               <ThumbnailWrapper>
-                {work.image ? (
-                  <ThumbnailImg src={work.image} alt={work.title} />
+                {work.images[0] ? (
+                  <ThumbnailImg src={work.images[0]} alt={work.title} />
                 ) : (
                   <ThumbnailPlaceholder />
                 )}

@@ -3,5 +3,5 @@ export type Work = {
   title: string;
   artist: string;
   description?: string;
-  image: string;
+  images: string[];
 };
