@@ -15,6 +15,10 @@ export const CLOTHING_REAL_WORKS: Work[] = [
       '/images/works-optimized/clothing-real/1/2.webp',
       '/images/works-optimized/clothing-real/1/3.webp',
       '/images/works-optimized/clothing-real/1/4.webp',
+      '/images/works-optimized/clothing-real/1/5.webp',
+      '/images/works-optimized/clothing-real/1/6.webp',
+      '/images/works-optimized/clothing-real/1/7.webp',
+      '/images/works-optimized/clothing-real/1/8.webp',
     ],
   },
   {
