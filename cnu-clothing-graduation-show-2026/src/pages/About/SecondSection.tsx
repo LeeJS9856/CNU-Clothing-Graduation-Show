@@ -48,8 +48,12 @@ const SecondSection = () => {
 
           <TextBlock className="eng">
             <Title>{EN.title}</Title>
-            <Subtitle>{EN.subtitle1}</Subtitle>
-            <Subtitle>{EN.subtitle2}</Subtitle>
+            <Subtitle>
+              {EN.subtitle1}
+              <MobileSpace> </MobileSpace>
+              <DesktopBreak />
+              {EN.subtitle2}
+            </Subtitle>
             <Detail>{EN.location}</Detail>
             <Detail>{EN.date}</Detail>
             <Detail>{EN.time}</Detail>
@@ -129,6 +133,21 @@ const Subtitle = styled.h2`
   margin: 0;
   font-weight: 500;
   color: ${COLORS.brand.primary};
+  text-align: right;
+`;
+
+const MobileSpace = styled.span`
+  ${responsiveStyle({
+      mobile: css`display: inline;`,
+      desktop: css`display: none;`,
+    })}
+`;
+
+const DesktopBreak = styled.br`
+  ${responsiveStyle({
+      mobile: css`display: none;`,
+      desktop: css`display: block;`,
+    })}
 `;
 
 const Detail = styled.p`
