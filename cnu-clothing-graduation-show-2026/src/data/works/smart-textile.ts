@@ -47,6 +47,11 @@ AI 기술이 일상에 자연스럽게 스며든 현대 사회 속 반복적인 
 체온 측정 아동복은 별도의 측정 행위 없이도 자연스럽게 체온을 모니터링한다.
 이를 통해 보호자의 부담을 줄이고, 아동의 건강 상태를 보다 효율적으로 관리할 수 있도록 한다.
 보이지 않는 선율이 되어 아이의 체온을 살피는 이 옷은, 단순한 데이터의 기록을 넘어 사랑하는 이를 지키고자 하는 가장 인간적인 온도의 기록이다.`,
-    images: ['/images/works/smart-textile/4/1.jpg'],
+    images: [
+      '/images/works/smart-textile/4/1.jpg',
+      '/images/works/smart-textile/4/2.jpg',
+      '/images/works/smart-textile/4/3.jpg',
+      '/images/works/smart-textile/4/4.jpg',
+    ],
   },
 ];

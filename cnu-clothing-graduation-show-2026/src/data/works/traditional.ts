@@ -12,7 +12,13 @@ export const TRADITIONAL_WORKS: Work[] = [
 디자인 과정 중 마주한 싱어송라이터 송소희의 공연은 큰 확신을 주었습니다. 국악의 뿌리를 지키면서도 자신만의 독창적인 음악 세계를 구축해 나가는 그녀의 무대는, 제가 지향하는 ‘전통의 동시대적 변주’ 그 자체였습니다. 그 무대에서 느낀 깊은 감동과 역동성을 의상의 디테일과 활동성에 담아냈습니다.
 
 작품명 '여우별'은 궂은 날에 잠깐 나타났다가 사라지는 별을 뜻하는 순우리말입니다. 무대 위에서 아티스트가 강렬한 존재감으로 빛을 발하고, 순간이 지나 사라진 뒤에도 남는 여운을 여우별에 빗대어 표현했습니다. 익숙한 한복의 선을 비틀어 낯설지만 아름다운 조형미를 완성한 이 작품이, 한국적 미감이 나아갈 새로운 방향이 되기를 기대합니다.`,
-    images: ['/images/works/traditional/1/1.jpg'],
+    images: [
+      '/images/works/traditional/1/1.jpg',
+      '/images/works/traditional/1/2.jpg',
+      '/images/works/traditional/1/3.jpg',
+      '/images/works/traditional/1/4.jpg',
+      '/images/works/traditional/1/5.jpg',
+    ],
   },
   {
     id: 2,
@@ -32,7 +38,11 @@ export const TRADITIONAL_WORKS: Work[] = [
     artist: '정지효',
     description: `‘나의 피날레‘는 졸업이라는 순간을 끝이 아닌 하나의 축제로 바라보며, 끝과 시작 사이 가장 빛나는 순간을 입는 한복이다.
 주인공처럼 그 순간을 경험할 수 있도록, 전통 한복의 구조를 현대적으로 재해석해 파티 한복으로 확장했다. 이를 통해 졸업이라는 순간을 빛나는 축제의 분위기로 풀어냈다.`,
-    images: ['/images/works/traditional/3/1.jpg'],
+    images: [
+      '/images/works/traditional/3/1.jpg',
+      '/images/works/traditional/3/2.jpg',
+      '/images/works/traditional/3/3.jpg',
+    ],
   },
   {
     id: 4,
