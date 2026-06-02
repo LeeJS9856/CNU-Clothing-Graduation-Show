@@ -7,9 +7,9 @@ export const CLOTHING_DIGITAL_WORKS: Work[] = [
     artist: '김지원',
     description: `<도시의 유연한 리듬>은 차갑고 견고한 콘크리트 숲 사이로 끊임없이 흐르는 유동적인 생명력과 예측 불가능한 에너지를 담아낸 비전입니다. 수직적이고 이성적인 도시의 뼈대 위로 다채로운 빛과 그림자가 교차하며 만들어내는 움직임은 마치 거대하고 부드러운 호흡처럼 다가옵니다. 엄격한 규칙 속에서도 유연하게 변화를 수용하고, 이질적인 요소들이 쉴 새 없이 부딪히며 만들어내는 경쾌한 조화로움이야말로 우리가 살아가는 현대 도시의 진정한 리듬이자 가장 매혹적인 본질임을 상징적으로 표현했습니다.`,
     images: [
-      '/images/works/clothing-digital/1/1.jpg',
-      '/images/works/clothing-digital/1/2.jpg',
-      '/images/works/clothing-digital/1/3.jpg',
+      '/images/works-optimized/clothing-digital/1/1.webp',
+      '/images/works-optimized/clothing-digital/1/2.webp',
+      '/images/works-optimized/clothing-digital/1/3.webp',
     ],
   },
   {
@@ -29,11 +29,11 @@ export const CLOTHING_DIGITAL_WORKS: Work[] = [
 성장하고 퍼져 나가는 과정인
 Organic Bloom을 표현한다.`,
     images: [
-      '/images/works/clothing-digital/2/1.jpg',
-      '/images/works/clothing-digital/2/2.jpg',
-      '/images/works/clothing-digital/2/3.jpg',
-      '/images/works/clothing-digital/2/4.jpg',
-      '/images/works/clothing-digital/2/5.jpg',
+      '/images/works-optimized/clothing-digital/2/1.webp',
+      '/images/works-optimized/clothing-digital/2/2.webp',
+      '/images/works-optimized/clothing-digital/2/3.webp',
+      '/images/works-optimized/clothing-digital/2/4.webp',
+      '/images/works-optimized/clothing-digital/2/5.webp',
     ],
   },
   {
@@ -44,9 +44,9 @@ Organic Bloom을 표현한다.`,
 
 본 작품에서는 심해의 초롱아귀를 형상화하여 유기적인 의상 실루엣을 보여준다. 특히 초롱아귀의 상징인 유인용 돌기를 빛나는 발광 촉수로 제작하여 의상에 구현하였다. 이렇듯 생존을 위해 스스로 발광하는 심해생물로부터 우리의 심연(Abyss) 속에서도 주체적으로 빛날 수 있다는 미학적 가치를 표현하고자 한다.`,
     images: [
-      '/images/works/clothing-digital/3/1.jpg',
-      '/images/works/clothing-digital/3/2.jpg',
-      '/images/works/clothing-digital/3/3.jpg',
+      '/images/works-optimized/clothing-digital/3/1.webp',
+      '/images/works-optimized/clothing-digital/3/2.webp',
+      '/images/works-optimized/clothing-digital/3/3.webp',
     ],
   },
 ];

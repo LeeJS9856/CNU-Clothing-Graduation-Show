@@ -134,7 +134,12 @@ const WorkDetailPage = (): React.JSX.Element => {
                       $isActive={index === selectedImageIndex}
                       onClick={() => setSelectedImageIndex(index)}
                     >
-                      <ThumbnailImg src={src} alt={`${currentWork.title} ${index + 1}`} />
+                      <ThumbnailImg
+                        src={src}
+                        alt={`${currentWork.title} ${index + 1}`}
+                        loading="lazy"
+                        decoding="async"
+                      />
                     </ThumbnailItem>
                   ))}
                 </ThumbnailList>
@@ -144,6 +149,7 @@ const WorkDetailPage = (): React.JSX.Element => {
                     <MainImage
                       src={images[selectedImageIndex]}
                       alt={currentWork.title}
+                      decoding="async"
                     />
                   ) : (
                     <MainImagePlaceholder />

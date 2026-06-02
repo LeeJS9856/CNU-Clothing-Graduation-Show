@@ -25,7 +25,7 @@ const TraditionalPage = (): React.JSX.Element => {
             >
               <ThumbnailWrapper>
                 {work.images[0] ? (
-                  <ThumbnailImg src={work.images[0]} alt={work.title} />
+                  <ThumbnailImg src={work.images[0]} alt={work.title} loading="lazy" decoding="async" />
                 ) : (
                   <ThumbnailPlaceholder />
                 )}
