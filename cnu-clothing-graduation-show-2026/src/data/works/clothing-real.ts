@@ -13,6 +13,8 @@ export const CLOTHING_REAL_WORKS: Work[] = [
     images: [
       '/images/works/clothing-real/1/1.jpg',
       '/images/works/clothing-real/1/2.jpg',
+      '/images/works/clothing-real/1/3.jpg',
+      '/images/works/clothing-real/1/4.jpg',
     ],
   },
   {
