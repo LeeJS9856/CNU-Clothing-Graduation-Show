@@ -37,6 +37,8 @@ export const BRANDING_WORKS: Work[] = [
       '/images/works-optimized/branding/3/2.webp',
       '/images/works-optimized/branding/3/3.webp',
       '/images/works-optimized/branding/3/4.webp',
+      '/images/works-optimized/branding/3/5.webp',
+      '/images/works-optimized/branding/3/6.webp',
     ],
   },
   {

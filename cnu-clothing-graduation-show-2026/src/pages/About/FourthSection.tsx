@@ -8,62 +8,51 @@ const FourthSection = () => {
     <Section $bgColor="#ffffff">
       <SectionMain>
         <ContentWrapper>
-          {/* 제목: 왼쪽 위에 메인 색상으로 배치 */}
           <MainTitle>졸업전시회 준비 위원회</MainTitle>
-          
 
-          {/* 4개 구역 그리드 (좌상, 우상, 좌하, 우하) */}
           <GridContainer>
-            {/* 좌상 - 위원장 */}
             <CommitteeBox>
               <DeptName>위원장</DeptName>
               <NameList>
-                <p>이름</p>
+                <p>김노은</p>
               </NameList>
             </CommitteeBox>
 
-            {/* 우상 - 관리부 */}
             <CommitteeBox>
               <DeptName>관리부</DeptName>
               <NameList>
-                <p>이름</p>
-                <p>이름</p>
-                <p>이름</p>
+                <p>박재은</p>
+                <p>이유진</p>
+                <p>한정효</p>
               </NameList>
             </CommitteeBox>
 
-            {/* 좌하 - 기획부 */}
             <CommitteeBox>
               <DeptName>기획부</DeptName>
               <NameList>
-                <p>이름</p>
-                <p>이름</p>
-                <p>이름</p>
+                <p>문재은</p>
+                <p>최원희</p>
               </NameList>
             </CommitteeBox>
 
-            {/* 우하 - 홍보부 */}
             <CommitteeBox>
               <DeptName>홍보부</DeptName>
               <NameList>
-                <p>이름</p>
-                <p>이름</p>
-                <p>이름</p>
-                <p>이름</p>
+                <p>박다미</p>
+                <p>이나연</p>
+                <p>정여진</p>
+                <p>최영서</p>
               </NameList>
             </CommitteeBox>
           </GridContainer>
-
         </ContentWrapper>
       </SectionMain>
-      
-      {/* 하단 푸터 */}
+
       <Footer />
     </Section>
   );
 };
 
-/* ── 스타일 ── */
 const Section = styled.section<{ $bgColor?: string }>`
   width: 100%;
   height: 100vh;
@@ -98,8 +87,8 @@ const MainTitle = styled.h2`
 
 const GridContainer = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr; /* 2열 구조 (좌/우) */
-  grid-template-rows: auto auto;    /* 2행 구조 (상/하) */
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
   padding: 15px 0;
   row-gap: 60px;
   column-gap: 80px;
@@ -107,17 +96,17 @@ const GridContainer = styled.div`
 
 const CommitteeBox = styled.div`
   display: flex;
-  align-items: flex-start; /* 상단 정렬 */
+  align-items: flex-start;
   justify-content: space-between;
 `;
 
 const DeptName = styled.div`
-    flex: 1;
-    text-align: left;
-    font-size: 1.0rem;
-    font-weight: 500;
-    color: ${COLORS.primary};
-    flex-shrink: 0;
+  flex: 1;
+  text-align: left;
+  font-size: 1rem;
+  font-weight: 500;
+  color: ${COLORS.primary};
+  flex-shrink: 0;
 `;
 
 const NameList = styled.div`
@@ -126,10 +115,10 @@ const NameList = styled.div`
   flex-direction: column;
   gap: 12px;
   text-align: left;
-  
+
   p {
     ${responsiveStyle({
-      mobile: css`font-size: 1.0rem;`,
+      mobile: css`font-size: 1rem;`,
       desktop: css`font-size: 1.1rem;`,
     })}
     color: ${COLORS.text.secondary};
