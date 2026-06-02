@@ -67,6 +67,9 @@ export const CLOTHING_REAL_WORKS: Work[] = [
       '/images/works-optimized/clothing-real/3/1.webp',
       '/images/works-optimized/clothing-real/3/2.webp',
       '/images/works-optimized/clothing-real/3/3.webp',
+      '/images/works-optimized/clothing-real/3/4.webp',
+      '/images/works-optimized/clothing-real/3/5.webp',
+      '/images/works-optimized/clothing-real/3/6.webp',
     ],
   },
 ];

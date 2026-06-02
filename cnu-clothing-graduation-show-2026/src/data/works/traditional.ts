@@ -49,6 +49,11 @@ export const TRADITIONAL_WORKS: Work[] = [
     title: '마법소녀',
     artist: '태가연',
     description: '전통복식의 실루엣과 디테일을 재해석해, 소녀라는 존재가 가진 사랑스러움을 담아냈다. 한복 특유의 유려한 곡선과 겹의 미학 위에 리본과 레이스 디테일을 통해 동화적이면서도 사랑스러운 분위기를 표현했다. 〈마법소녀〉는 단순히 귀엽고 사랑스러운 이미지를 넘어, 스스로의 세계를 지키고 성장해 나가는 소녀의 내면을 상징한다. 전통과 판타지, 동양적 감성과 현대적 스타일링의 경계를 넘나들며, 익숙한 복식 안에서 새로운 환상을 제안한다.',
-    images: ['/images/works-optimized/traditional/4/1.webp'],
+    images: [
+      '/images/works-optimized/traditional/4/1.webp',
+      '/images/works-optimized/traditional/4/2.webp',
+      '/images/works-optimized/traditional/4/3.webp',
+      '/images/works-optimized/traditional/4/4.webp',
+    ],
   },
 ];

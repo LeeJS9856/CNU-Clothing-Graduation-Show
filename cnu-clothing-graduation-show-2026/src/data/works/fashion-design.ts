@@ -94,7 +94,12 @@ export const FASHION_DESIGN_WORKS: Work[] = [
     title: 'Metamorphosis : 탈피',
     artist: '이정석',
     description: '사람은 살아가며 수없이 자신을 벗어내고 다시 만들어간다. 사이즈와 스타일이 달라지고 익숙했던 감정과 관계, 오래된 시선과 고정된 틀을 지나며 우리는 조금씩 다른 모습으로 변화한다. 이 작품은 그러한 과정을 ‘탈피’라는 생물학적 현상에 빗대어 표현하였다. 얇고 불완전한 외피, 드러나는 내부 구조, 서로 다른 소재의 충돌을 통해 성장 이전의 불안정한 순간을 담아냈다. 아직 완전하지 않기에 더욱 솔직하고, 흔들리기에 더 깊게 남는 변화의 순간을 이야기 해보고자 한다.',
-    images: ['/images/works-optimized/fashion-design/5/1.webp'],
+    images: [
+      '/images/works-optimized/fashion-design/5/1.webp',
+      '/images/works-optimized/fashion-design/5/2.webp',
+      '/images/works-optimized/fashion-design/5/3.webp',
+      '/images/works-optimized/fashion-design/5/4.webp',
+    ],
   },
   {
     id: 6,
