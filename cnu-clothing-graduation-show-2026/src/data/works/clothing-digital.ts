@@ -47,6 +47,7 @@ Organic Bloom을 표현한다.`,
       '/images/works-optimized/clothing-digital/3/1.webp',
       '/images/works-optimized/clothing-digital/3/2.webp',
       '/images/works-optimized/clothing-digital/3/3.webp',
+      '/images/works-optimized/clothing-digital/3/4.webp',
     ],
   },
 ];

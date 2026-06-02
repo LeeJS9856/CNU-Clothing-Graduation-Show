@@ -67,7 +67,7 @@ export const FASHION_DESIGN_WORKS: Work[] = [
   },
   {
     id: 4,
-    title: 'Title-Form of the Intangible: 성숙함의 감정들',
+    title: 'Form of the Intangible: 성숙함의 감정들',
     artist: '이유진',
     description: `역설적 형상으로 기록된 내면의 층위
 
