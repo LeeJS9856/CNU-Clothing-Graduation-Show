@@ -66,12 +66,16 @@ export const MEDIA_PRODUCTION_WORKS: Work[] = [
     id: 6,
     title: 'SENSE',
     artist: '최원희',
-    description: `본 작품은 ‘감각의 흐름을 통한 재해석’을 주제로 제작한 매거진이다. 시각, 청각, 촉각, 후각, 미각의 다섯 가지 감각을 중심으로 전시와 이미지들을 재구성하며, 감각이 서로 교차하고 확장되는 과정을 표현하였다. 단순한 전시 기록이 아닌, 관람 과정에서 발생하는 개인의 기억과 감정, 감각의 변화를 시각적 언어로 풀어내고자 하였으며, 사라짐과 잔상, 흐름의 감각을 매거진의 편집과 그래픽 요소 전반에 담아 하나의 감각적 경험으로 완성하였다.`,
+    description: `SENSE는 감각의 흐름을 통해 전시를 재해석하는 패션 기반 아트 매거진이다.
+우리는 전시를 단순히 보는 것에서 나아가, 보고, 듣고, 만지고, 느끼는 경험으로 확장한다.
+또한 흩어지는 감각의 순간들을 패션의 언어로 번역하여 새로운 시각적 경험을 제안한다.`,
     images: [
       '/images/works-optimized/media-production/6/1.webp',
       '/images/works-optimized/media-production/6/2.webp',
       '/images/works-optimized/media-production/6/3.webp',
       '/images/works-optimized/media-production/6/4.webp',
+      '/images/works-optimized/media-production/6/5.webp',
+      '/images/works-optimized/media-production/6/6.webp',
     ],
   },
 ];
