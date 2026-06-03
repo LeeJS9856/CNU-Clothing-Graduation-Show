@@ -5,16 +5,8 @@ import { useResponsive } from '@/hooks/useResponsive';
 import { responsiveStyle } from '@/styles/responsive';
 import { css } from 'styled-components';
 
-// 샘플 이미지들
-const MAGAZINE_PAGES = [
-  'https://picsum.photos/id/10/800/1131', // 1페이지 (A4 비율)
-  'https://picsum.photos/id/20/800/1131', // 2페이지
-  'https://picsum.photos/id/30/800/1131', // 3페이지
-  'https://picsum.photos/id/40/800/1131', // 4페이지
-  'https://picsum.photos/id/50/800/1131', // 5페이지
-  'https://picsum.photos/id/60/800/1131', // 6페이지
-  'https://picsum.photos/id/70/800/1131', // 7페이지
-];
+// 🌟 목데이터 대신 생성한 최적화 매거진 파일 경로를 가져옵니다.
+import { MAGAZINE_PAGES } from '@/data/magazine/magazine';
 
 const MagazinePage = (): React.JSX.Element => {
   const device = useResponsive();
@@ -22,7 +14,7 @@ const MagazinePage = (): React.JSX.Element => {
 
   // 현재 가리키고 있는 페이지의 인덱스
   // 데스크톱: 왼쪽 페이지 기준 (0, 2, 4...)
-  // 모바일: 현재 보여지는 단일 페이지 기준 (0, 1, 2, 3, 4, 5)
+  // 모바일: 현재 보여지는 단일 페이지 기준 (0, 1, 2, 3...)
   const [currentPage, setCurrentPage] = useState(0);
   const [animKey, setAnimKey] = useState(0);
 
@@ -78,23 +70,23 @@ const MagazinePage = (): React.JSX.Element => {
 
           {/* 오른쪽 페이지 (데스크톱에서만 노출, 다음 버튼 역할) */}
           {!isMobile && (
-              <PageSection 
-                onClick={handleNext} 
-                $disabled={currentPage + 2 >= totalPages}
-                $isMobile={false}
-              >
-                {MAGAZINE_PAGES[currentPage + 1] ? (
-                  // 다음 페이지가 존재하면 기존처럼 이미지 렌더링
-                  <PageImage 
-                    src={MAGAZINE_PAGES[currentPage + 1]} 
-                    alt={`Page ${currentPage + 2}`} 
-                  />
-                ) : (
-                  // 홀수 장이라 마지막 남은 오른쪽 페이지가 없을 때 보여줄 빈 공간 (회색 바탕 등)
-                  <EmptyPageSection />
-                )}
-              </PageSection>
-            )}
+            <PageSection 
+              onClick={handleNext} 
+              $disabled={currentPage + 2 >= totalPages}
+              $isMobile={false}
+            >
+              {MAGAZINE_PAGES[currentPage + 1] ? (
+                // 다음 페이지가 존재하면 기존처럼 이미지 렌더링
+                <PageImage 
+                  src={MAGAZINE_PAGES[currentPage + 1]} 
+                  alt={`Page ${currentPage + 2}`} 
+                />
+              ) : (
+                // 홀수 장이라 마지막 남은 오른쪽 페이지가 없을 때 보여줄 빈 공간 (회색 바탕 등)
+                <EmptyPageSection />
+              )}
+            </PageSection>
+          )}
 
         </BookWrapper>
       </MagazineContainer>
@@ -102,7 +94,7 @@ const MagazinePage = (): React.JSX.Element => {
   );
 };
 
-/* ---------- 스타일 및 애니메이션 ---------- */
+/* ---------- 스타일 및 애니메이션 (기존 유지) ---------- */
 
 const fadeIn = keyframes`
   from { opacity: 0; transform: translateY(10px); }

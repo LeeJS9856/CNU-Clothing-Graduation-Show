@@ -3,8 +3,8 @@ import path from 'node:path';
 import sharp from 'sharp';
 
 const root = process.cwd();
-const inputDir = path.join(root, 'public', 'images', 'works');
-const outputDir = path.join(root, 'public', 'images', 'works-optimized');
+const inputDir = path.join(root, 'public', 'images', 'magazine');
+const outputDir = path.join(root, 'public', 'images', 'magazine-optimized');
 const supportedExtensions = new Set(['.jpg', '.jpeg', '.png', '.webp', '.avif']);
 const maxSize = 2200;
 const quality = 82;
