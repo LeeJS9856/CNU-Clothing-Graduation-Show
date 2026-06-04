@@ -8,6 +8,7 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "optimize:works-images": "node scripts/optimize-works-images.mjs",
+    "optimize:single-image": "node scripts/optimize-single-image.mjs",
     "preview": "vite preview"
   },
   "dependencies": {
