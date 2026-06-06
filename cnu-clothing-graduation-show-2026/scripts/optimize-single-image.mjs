@@ -9,7 +9,7 @@ const maxSize = 2200;
 const quality = 82;
 
 // 🌟여기에 변환하고 싶은 파일 이름을 입력하세요 (예: '매거진 (1).jpg')
-const targetFileName = '매거진 (49).png'; 
+const targetFileName = '매거진 (2).png'; 
 
 const formatBytes = (bytes) => `${(bytes / 1024 / 1024).toFixed(2)}MB`;
 
